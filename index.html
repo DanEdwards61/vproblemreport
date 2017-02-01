@@ -9,7 +9,7 @@
     <style>
         .log-container {
             width: 100%;
-            height: 600px;
+            height: 200px;
             overflow-y: none;
             overflow-x: none;
         }
@@ -26,10 +26,24 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="reportURL">Report URL:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="reportURL" />
+                        <div class="input-group-btn">
+                            <input type="button" class="btn btn-primary" value="Load" ng-click="getReport(this.value)"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id='row.log'>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <p class="form-control-static" id="username"></p>
+                    <p class="form-control-static" id="username" ng-model="userName"></p>
                 </div>
                 <div class="form-group">
                     <label for="extension">Extension</label>
@@ -67,11 +81,76 @@
             </div>
         </div>
 
+        <div ng-repeat='statset in report.rtcStats'>
+            RTC Stat {{statset.key}}
+            <div class="row" id='row.rtcStats'>
+                <div class="col-md-6">
+                    <label for="rtcapi">API Trace</label>
+                    <div id='rtcapi' ng-repeat="v in api[statset.key]">
+                        {{v[0]}}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="rtcstat">getStats</label>
+                    <div id='rtcstat' ng-repeat="v in stats[statset.key]">
+                        {{v[1]}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 <script type="text/javascript">
 
-    var report = JSON.parse(document.getElementById('report').textContent);
+    var app = angular.module('probReportApp', []);
+    app.controller('probReportCtrl', function($scope, $http) {
+        $scope.report = '';
+
+        $scope.userName = '';
+
+        $scope.active_view = 'log';
+        $scope.api = [];
+        $scope.stats = [];
+
+        $scope.setStats = function (rtcStats) {
+            $scope.api = [];
+            $scope.stats = [];
+            for( var ndx=0; ndx<rtcStats.length; ndx++ ) {
+                var apiList = [];
+                var statList = [];
+
+                rtcStats[ndx].value.forEach( (stat) => {
+                    if (stat[0] == 'getstats') {
+                        statList.push(stat);
+                    } else {
+                        apiList.push(stat);
+                    }
+                })
+                $scope.api.push(apiList);
+                $scope.stats.push(statList);
+            }
+
+        }
+
+        $scope.getReport = function() {
+            $http.get( "https://api.dev1.vappcenter.com/v1/download/16/6daaff74-9e51-416c-8a10-30d32433807a" )
+            .then(function(response) {
+                $scope.report = response.data;
+                $scope.userName = $scope.report.report.UserName;
+
+                setLog($scope.report.log);
+
+                $scope.setStats($scope.report.rtcStats);
+            });
+        }
+
+        $scope.show = function(what) {
+            active_view = what;
+        }
+    });
+
+
+//    var report = JSON.parse(document.getElementById('report').textContent);
 
     function getElem(id) {
         return document.getElementById(id);
@@ -85,10 +164,10 @@
     };
 
     function setHeaders(report) {
-        header.username.innerHTML = report.UserName;
-        header.extension.innerHTML = report.Extension;
-        header.platform.innerHTML = report.Platform;
-        header.text.innerHTML = report.Text;
+//        header.username.innerHTML = report.UserName;
+//        header.extension.innerHTML = report.Extension;
+//        header.platform.innerHTML = report.Platform;
+//        header.text.innerHTML = report.Text;
     }
 
 
@@ -101,8 +180,8 @@
 
         var regex = new RegExp(str);
 
-        console.log(typeof report.log);
-        var filteredLog = report.log.filter(function(elem) {
+        console.log(typeof $scope.report.log);
+        var filteredLog = $scope.report.log.filter(function(elem) {
             return regex.test(elem.value.message);
         });
 
@@ -143,9 +222,9 @@
     }
 
     function init() {
-        setHeaders(report.report);
-        setLog(report.log);
-        document.title = report.report.UserName + '-Problem Report';
+//        setHeaders(report.report);
+//        setLog(report.log);
+//        document.title = report.report.UserName + '-Problem Report';
     }
 
 </script>
