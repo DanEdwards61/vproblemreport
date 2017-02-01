@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Log</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <style>
+        .log-container {
+            width: 100%;
+            height: 600px;
+            overflow-y: none;
+            overflow-x: none;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+
+    <div class="container" ng-app="probReportApp" ng-controller="probReportCtrl">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Problem Report</h2>
+                <hr/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <p class="form-control-static" id="username"></p>
+                </div>
+                <div class="form-group">
+                    <label for="extension">Extension</label>
+                    <p class="form-control-static" id="extension"></p>
+                </div>
+                <div class="form-group">
+                    <label for="platform">Platform</label>
+                    <p class="form-control-static" id="platform"></p>
+                </div>
+                <div class="form-group">
+                    <label for="text">Text</label>
+                    <p class="form-control-static" id="text"></p>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label for="filter">Filter</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="filter" onkeypress="filterPress(event, getElem('filter').value)"/>
+                        <div class="input-group-btn">
+                            <input type="button" class="btn btn-primary" value="Filter" onclick="filter(getElem('filter').value)"/>
+                        </div>
+                        <div class="input-group-btn">
+                            <input type="button" class="btn btn-primary" value="Clear" onclick="clear_filter()"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="log">Log</label>
+                    <div class="log-container">
+                        <textarea id="log_text" style="width:100%; height:100%;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+
+    var report = JSON.parse(document.getElementById('report').textContent);
+
+    function getElem(id) {
+        return document.getElementById(id);
+    }
+
+    var header = {
+        username: getElem('username'),
+        extension: getElem('extension'),
+        platform: getElem('platform'),
+        text: getElem('text')
+    };
+
+    function setHeaders(report) {
+        header.username.innerHTML = report.UserName;
+        header.extension.innerHTML = report.Extension;
+        header.platform.innerHTML = report.Platform;
+        header.text.innerHTML = report.Text;
+    }
+
+
+    function clear_filter() {
+        filter('');
+        getElem('filter').value = '';
+    }
+
+    function filter(str) {
+
+        var regex = new RegExp(str);
+
+        console.log(typeof report.log);
+        var filteredLog = report.log.filter(function(elem) {
+            return regex.test(elem.value.message);
+        });
+
+        setLog(filteredLog);
+    }
+
+    function filterPress(evt, val) {
+        if(evt.keyCode === 13) {
+            filter(val);
+        }
+    }
+
+    var logTextArea = getElem('log_text');
+
+    function setLog(log) {
+        var logText = '';
+        for(var i = 0; i < log.length; i++) {
+            logText = logText + formatLogEntry(log[i]) + '\n';
+        }
+        logTextArea.innerText = logText;
+    }
+
+
+
+    function formatTimestamp(ts) {
+        var time = new Date(ts);
+        return time.toISOString()
+            .replace(/T/, ' ')
+            .replace(/Z/, ' ' + formatTimestampOffset(time.getTimezoneOffset()));
+    }
+
+    function formatTimestampOffset(offset) {
+        return offset > 0 ? `-${offset / 60}:00` : `${offset / 60}:00`;
+    }
+
+    function formatLogEntry(entry) {
+        return '[' + formatTimestamp(entry.value.timestamp) + ' - ' + entry.value.context + '] ' + entry.value.message;
+    }
+
+    function init() {
+        setHeaders(report.report);
+        setLog(report.log);
+        document.title = report.report.UserName + '-Problem Report';
+    }
+
+</script>
+</body>
+</html>

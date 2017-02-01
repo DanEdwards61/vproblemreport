@@ -1,0 +1,23 @@
+{
+  "name": "vproblemreport",
+  "version": "1.0.0",
+  "description": "VPW Problem Report formatter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanEdwards61/vproblemreport.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanEdwards61/vproblemreport/issues"
+  },
+  "homepage": "https://github.com/DanEdwards61/vproblemreport#readme",
+  "dependencies": {
+    "dot": "^1.1.1",
+    "moment": "^2.17.1"
+  }
+}
