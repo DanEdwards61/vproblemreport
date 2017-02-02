@@ -5,14 +5,147 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="moment.js"></script>
 
     <style>
+/* Copyright (c) 2013 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+
         .log-container {
             width: 100%;
             height: 200px;
             overflow-y: none;
             overflow-x: none;
         }
+
+
+.peer-connection-dump-root {
+  font-size: 0.8em;
+  padding-bottom: 3px;
+}
+
+.update-log-container {
+  float: left;
+  width: 50em;
+  overflow: auto;
+}
+
+.update-log-failure {
+  background-color: #be2026;
+}
+
+.ssrc-info-block {
+  color: #999;
+  font-size: 0.8em;
+}
+
+.stats-graph-container {
+  clear: both;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.stats-graph-sub-container {
+  float: left;
+  margin: 0.5em;
+}
+
+.stats-graph-sub-container > div {
+  float: left;
+}
+
+.stats-graph-sub-container > div:first-child {
+  float: none;
+}
+
+.stats-table-container {
+  float: left;
+  padding: 0 0 0 0;
+  width: 50em;
+  overflow: auto;
+}
+
+.stats-table-container >div:first-child {
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 1em 0;
+}
+
+.stats-table-active-connection {
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Lucida Grande', sans-serif;
+}
+
+table {
+  border: none;
+  margin: 0 1em 1em 0;
+}
+
+td {
+  border: none;
+  font-size: 0.8em;
+  padding: 0 1em 0.5em 0;
+  min-width: 10em;
+  word-break: break-all;
+}
+
+table > tr {
+  vertical-align: top;
+}
+
+th {
+  border: none;
+  font-size: 0.8em;
+  padding: 0 0 0.5em 0;
+}
+
+.tab-head {
+  background-color: rgb(220, 220, 220);
+  margin: 10px 2px 0 2px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  width: 20em;
+  height: 3em;
+}
+
+.active-tab-head {
+  background-color: turquoise;
+  font-weight: bold;
+}
+
+.tab-body {
+  border: 1px solid turquoise;
+  border-top-width: 3px;
+  padding: 0 10px 500px 10px;
+  display: none;
+}
+
+.active-tab-body {
+  display: block;
+}
+
+.user-media-request-div-class {
+  background-color: lightgray;
+  margin: 10px 0 10px 0;
+}
+
+.user-media-request-div-class > div {
+  margin: 5px 0 5px 0;
+}
+
+.audio-diagnostic-dumps-info {
+  max-width: 60em;
+}
+
+
+
     </style>
 </head>
 
@@ -30,7 +163,7 @@
                 <div class="form-group">
                     <label for="reportURL">Report URL:</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="reportURL" ng-model="rawReport" />
+                        <input type="text" class="form-control" id="reportURL" ng-model="rawReport" value="https://api.dev1.vappcenter.com/v1/download/16/6daaff74-9e51-416c-8a10-30d32433807a"/>
                         <div class="input-group-btn">
                             <input type="button" class="btn btn-primary" value="Load" ng-click="getReport(rawReport)"/>
                         </div>
@@ -81,21 +214,46 @@
             </div>
         </div>
 
+<!--
+
+            "googLibjingleSession_1772720753097742774": {
+              "id": "googLibjingleSession_1772720753097742774",
+              "timestamp": 1485965804983,
+              "type": "googLibjingleSession",
+              "googInitiator": "false"
+            },
+-->
+
         <div ng-repeat='statset in report.rtcStats'>
             RTC Stat {{statset.key}}
-            <div class="row" id='row.rtcStats'>
-                <div class="col-md-6">
-                    <label for="rtcapi">API Trace</label>
-                    <div id='rtcapi' ng-repeat="v in api[statset.key]">
-                        {{v[0]}}
+            <div class="row" id='row.rtcStats' class="update-log-container">
+                    <div>API Trace</div>
+                    <table class="update-log-table">
+                        <tr><td>Time</td><td>Event</td></tr>
+                        <tr ng-repeat="v in api[statset.key]">
+                            <td> {{formatAPITime(v[3])}}</td>
+                            <td>
+                                <details>
+                                    <summary>{{v[0]}}</summary>
+                                    <pre>{{v[2]}}</pre>
+                                </details>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="stats-table-container">
+                        <div> Stats Tables</div>
+                        <details ng-repeat="statGroup in stats[statset.key]">
+                            <summary>{{statGroup.name}} ({{statGroup.type}})</summary>
+                            <table border="1">
+                                <tbody>
+                                    <tr><th colspan="2">Statistics {{statGroup.name}}</th></tr>
+                                    <tr ng-repeat="p in statGroup.propList">
+                                        <td>{{p.key}}</td><td>{{p.val}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <label for="rtcstat">getStats</label>
-                    <div id='rtcstat' ng-repeat="v in stats[statset.key]">
-                        {{v[0]}}
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -110,8 +268,8 @@
 
         $scope.active_view = 'log';
         $scope.api = [];
-        $scope.stats = [];
         $scope.lastState;
+        $scope.stats = [];
 
         $scope.setStats = function (rtcStats) {
             $scope.api = [];
@@ -119,6 +277,7 @@
             for( var ndx=0; ndx<rtcStats.length; ndx++ ) {
                 var apiList = [];
                 var statList = [];
+                var statFinal = {};
 
                 rtcStats[ndx].value.forEach( (stat) => {
                     if (stat[0] == 'getstats') {
@@ -128,7 +287,33 @@
                     }
                 })
                 $scope.api.push(apiList);
-                $scope.stats.push(statList);
+                // The compression algorithm strips properties that are duplicates between each group offset
+                // stats. Loop through the list of stat reports and build up 1 stat object
+                statList.forEach( (statGroup) => {
+                    for (var key in statGroup[2]) {
+                        statFinal[key] = statGroup[2][key];
+                    }
+                });
+
+                var finalStatGroup = [];
+                var propsToRemove = [ 'id', 'timestamp', 'type'];
+                for (var prop in statFinal) {
+                    if (statFinal.hasOwnProperty(prop)) {
+                        var propObj = statFinal[prop];
+                        var s = {name: prop, timestamp: propObj.timestamp, type:propObj.type, propList: [] };
+                        propsToRemove.forEach( (toRemove) => {
+                            delete propObj[toRemove];
+                        });
+
+                        for( var p1 in propObj) {
+                            if (propObj.hasOwnProperty(p1)) {
+                                s.propList.push({key: p1, val: propObj[p1]})
+                            }
+                        }
+                        finalStatGroup.push(s);
+                    }
+                }
+                $scope.stats.push(finalStatGroup);
             }
 
         }
@@ -143,6 +328,10 @@
 
                 $scope.setStats($scope.report.rtcStats);
             });
+        }
+
+        $scope.formatAPITime = function(d) {
+            return moment(d).format('MM/DD h:mm:ss.SSS');
         }
 
         $scope.show = function(what) {
