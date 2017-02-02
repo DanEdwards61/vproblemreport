@@ -30,9 +30,9 @@
                 <div class="form-group">
                     <label for="reportURL">Report URL:</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="reportURL" />
+                        <input type="text" class="form-control" id="reportURL" ng-model="rawReport" />
                         <div class="input-group-btn">
-                            <input type="button" class="btn btn-primary" value="Load" ng-click="getReport(this.value)"/>
+                            <input type="button" class="btn btn-primary" value="Load" ng-click="getReport(rawReport)"/>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                 <div class="col-md-6">
                     <label for="rtcstat">getStats</label>
                     <div id='rtcstat' ng-repeat="v in stats[statset.key]">
-                        {{v[1]}}
+                        {{v[0]}}
                     </div>
                 </div>
             </div>
@@ -111,6 +111,7 @@
         $scope.active_view = 'log';
         $scope.api = [];
         $scope.stats = [];
+        $scope.lastState;
 
         $scope.setStats = function (rtcStats) {
             $scope.api = [];
@@ -132,8 +133,8 @@
 
         }
 
-        $scope.getReport = function() {
-            $http.get( "https://api.dev1.vappcenter.com/v1/download/16/6daaff74-9e51-416c-8a10-30d32433807a" )
+        $scope.getReport = function(url) {
+            $http.get( url )
             .then(function(response) {
                 $scope.report = response.data;
                 $scope.userName = $scope.report.report.UserName;
