@@ -8,18 +8,18 @@
     <script src="moment.js"></script>
 
     <style>
+
+    .log-container {
+        width: 100%;
+        height: 200px;
+        overflow-y: none;
+        overflow-x: none;
+    }
+
+
 /* Copyright (c) 2013 The Chromium Authors. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file. */
-
-
-        .log-container {
-            width: 100%;
-            height: 200px;
-            overflow-y: none;
-            overflow-x: none;
-        }
-
 
 .peer-connection-dump-root {
   font-size: 0.8em;
@@ -196,7 +196,13 @@ th {
                 <div class="form-group">
                     <label for="filter">Filter</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="filter" onkeypress="filterPress(event, getElem('filter').value)"/>
+                        <input type="text" class="form-control" id="filter" ng-model="selectedFilter" onkeypress="filterPress(event, getElem('filter').value)"/>
+                        <select id="filter" class="form-control" id="filter_list" ng-model="selectedFilter">
+                            <option></option>
+                            <option>(CallMake|CallNotification,|CallDone)</option>
+                            <option>(WCAPI message received|Sending WCAPI message)</option>
+                        </select>
+
                         <div class="input-group-btn">
                             <input type="button" class="btn btn-primary" value="Filter" onclick="filter(getElem('filter').value)"/>
                         </div>
@@ -223,37 +229,43 @@ th {
               "googInitiator": "false"
             },
 -->
+        <div>
+            <h4>RTC Stats</h4>
+            <div ng-show="!report.rtcStats || report.rtcStats.length == 0">
+                No RTC stats in the log file
+            </div>
 
-        <div ng-repeat='statset in report.rtcStats'>
-            RTC Stat {{statset.key}}
-            <div class="row" id='row.rtcStats' class="update-log-container">
-                    <div>API Trace</div>
-                    <table class="update-log-table">
-                        <tr><td>Time</td><td>Event</td></tr>
-                        <tr ng-repeat="v in api[statset.key]">
-                            <td> {{formatAPITime(v[3])}}</td>
-                            <td>
-                                <details>
-                                    <summary>{{v[0]}}</summary>
-                                    <pre>{{v[2]}}</pre>
-                                </details>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="stats-table-container">
-                        <div> Stats Tables</div>
-                        <details ng-repeat="statGroup in stats[statset.key]">
-                            <summary>{{statGroup.name}} ({{statGroup.type}})</summary>
-                            <table border="1">
-                                <tbody>
-                                    <tr><th colspan="2">Statistics {{statGroup.name}}</th></tr>
-                                    <tr ng-repeat="p in statGroup.propList">
-                                        <td>{{p.key}}</td><td>{{p.val}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </details>
-                    </div>
+            <div ng-repeat='statset in report.rtcStats'>
+                RTC Stat {{statset.key}}
+                <div class="row" id='row.rtcStats' class="update-log-container">
+                        <div>API Trace</div>
+                        <table class="update-log-table">
+                            <tr><td>Time</td><td>Event</td></tr>
+                            <tr ng-repeat="v in api[statset.key]">
+                                <td> {{formatAPITime(v[3])}}</td>
+                                <td>
+                                    <details>
+                                        <summary>{{v[0]}}</summary>
+                                        <pre>{{v[2]}}</pre>
+                                    </details>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="stats-table-container">
+                            <div> Stats Tables</div>
+                            <details ng-repeat="statGroup in stats[statset.key]">
+                                <summary>{{statGroup.name}} ({{statGroup.type}})</summary>
+                                <table border="1">
+                                    <tbody>
+                                        <tr><th colspan="2">Statistics {{statGroup.name}}</th></tr>
+                                        <tr ng-repeat="p in statGroup.propList">
+                                            <td>{{p.key}}</td><td>{{p.val}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </details>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
@@ -261,17 +273,29 @@ th {
 <script type="text/javascript">
 
     var app = angular.module('probReportApp', []);
+    var rootscope;
     app.controller('probReportCtrl', function($scope, $http) {
+        rootscope = $scope;
         $scope.report = '';
 
         $scope.userName = '';
+
+        $scope.selectedFilter = '';
 
         $scope.active_view = 'log';
         $scope.api = [];
         $scope.lastState;
         $scope.stats = [];
 
+        $scope.setFilterText = function() {
+            getElem('filter').value = getElem('filter_list').value;
+        }
+
         $scope.setStats = function (rtcStats) {
+            if (!rtcStats || rtcStats.length == 0 ) {
+                return;
+            }
+
             $scope.api = [];
             $scope.stats = [];
             for( var ndx=0; ndx<rtcStats.length; ndx++ ) {
@@ -322,7 +346,7 @@ th {
             $http.get( url )
             .then(function(response) {
                 $scope.report = response.data;
-                $scope.userName = $scope.report.report.UserName;
+                setHeaders($scope.report.report);
 
                 setLog($scope.report.log);
 
@@ -354,10 +378,10 @@ th {
     };
 
     function setHeaders(report) {
-//        header.username.innerHTML = report.UserName;
-//        header.extension.innerHTML = report.Extension;
-//        header.platform.innerHTML = report.Platform;
-//        header.text.innerHTML = report.Text;
+        header.username.innerHTML = report.UserName;
+        header.extension.innerHTML = report.Extension;
+        header.platform.innerHTML = report.Platform;
+        header.text.innerHTML = report.Text;
     }
 
 
@@ -370,8 +394,7 @@ th {
 
         var regex = new RegExp(str);
 
-        console.log(typeof $scope.report.log);
-        var filteredLog = $scope.report.log.filter(function(elem) {
+        var filteredLog = rootscope.report.log.filter(function(elem) {
             return regex.test(elem.value.message);
         });
 
@@ -389,7 +412,7 @@ th {
     function setLog(log) {
         var logText = '';
         for(var i = 0; i < log.length; i++) {
-            logText = logText + formatLogEntry(log[i]) + '\n';
+            logText = logText + formatLogEntry(log[i]) + '\n\n';
         }
         logTextArea.innerText = logText;
     }
