@@ -158,6 +158,10 @@ th {
                 <hr/>
             </div>
         </div>
+        <div class="row" id="status" ng-show="statusMessage!=''">
+            <label for="status_text">Status:</label>
+            <input type="text" id="status_text" ng-model="statusMessage"></label>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
@@ -286,6 +290,11 @@ th {
         $scope.api = [];
         $scope.lastState;
         $scope.stats = [];
+        $scope.statusMessage = '';
+
+        $scope.showStatus = function(msg) {
+            $scope.statusMessage = msg;
+        }
 
         $scope.setFilterText = function() {
             getElem('filter').value = getElem('filter_list').value;
@@ -304,13 +313,39 @@ th {
                 var statFinal = {};
 
                 rtcStats[ndx].value.forEach( (stat) => {
-                    if (stat[0] == 'getstats') {
-                        statList.push(stat);
-                    } else {
-                        apiList.push(stat);
+                    switch(stat[0]) 
+                    {
+                        case 'getstats':
+                            statList.push(stat);
+                            break;
+
+                        case 'setRemoteDescription':
+                        case 'createAnswerOnSuccess':
+                        case 'setLocalDescription':
+                            var sdpInfo = stat[2];
+                            var pre = 'type: ' + sdpInfo.type + '\nsdp:' + sdpInfo.sdp.replace('\r\n', '\n');
+                            stat[2] = pre;
+                            apiList.push(stat);
+                            break;
+
+                        case 'setLocalDescriptionOnSuccess':
+                        case 'setRemoteDescriptionOnSuccess':
+                        case 'setLocalDescriptionOnFailure':
+                        case 'setRemoteDescriptionOnFailure':
+                        case 'onnegotiationneeded':
+                            stat.push(stat[2]);      // These events are not stored with an object from rtcStats, so time is in element 2, instead of element 3.
+                            apiList.push(stat);
+                            break;
+
+                        default:
+                            apiList.push(stat);
+                            break;
                     }
                 })
-                $scope.api.push(apiList);
+                $scope.api.push(apiList.sort( function(a, b) {
+                    // compare the last element in the array
+                    return a[a.length-1] - b[b.length-1];
+                }));
                 // The compression algorithm strips properties that are duplicates between each group offset
                 // stats. Loop through the list of stat reports and build up 1 stat object
                 statList.forEach( (statGroup) => {
@@ -343,14 +378,23 @@ th {
         }
 
         $scope.getReport = function(url) {
+            $scope.showStatus( 'Downloading report...');
+
             $http.get( url )
             .then(function(response) {
                 $scope.report = response.data;
                 setHeaders($scope.report.report);
+                $scope.showStatus('Setting log data');
 
-                setLog($scope.report.log);
+                setTimeout( function() {
+                    setLog($scope.report.log);
 
-                $scope.setStats($scope.report.rtcStats);
+                    $scope.setStats($scope.report.rtcStats);
+
+                    $scope.showStatus('');
+
+                    $scope.$apply();
+                }, 0);
             });
         }
 
@@ -391,6 +435,7 @@ th {
     }
 
     function filter(str) {
+        rootscope.statusMessage = 'Filtering log file'
 
         var regex = new RegExp(str);
 
@@ -399,6 +444,7 @@ th {
         });
 
         setLog(filteredLog);
+        rootscope.statusMessage = ''
     }
 
     function filterPress(evt, val) {
