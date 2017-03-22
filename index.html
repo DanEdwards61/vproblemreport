@@ -215,9 +215,10 @@ th {
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" id="log_file">
                     <label for="log">Log</label>
-                    <div class="log-container">
+                    <button onclick="downloadLog()">Download log</button> <output></output>
+                    <div class="log-container" contenteditable>
                         <textarea id="log_text" style="width:100%; height:100%;"></textarea>
                     </div>
                 </div>
@@ -275,7 +276,23 @@ th {
     </div>
 
 <script type="text/javascript">
+var container = document.querySelector('#log_file');
+var typer = container.querySelector('[contenteditable]');
+var output = container.querySelector('output');
 
+
+var o1 = {
+    name: 'o1',
+    child: { 
+        name: 'o1_child',
+        child: null
+    }
+}
+
+console.log(JSON.stringify(o1));
+
+const MIME_TYPE = 'text/plain';
+    
     var app = angular.module('probReportApp', []);
     var rootscope;
     app.controller('probReportCtrl', function($scope, $http) {
@@ -486,6 +503,47 @@ th {
 //        document.title = report.report.UserName + '-Problem Report';
     }
 
+
+    function cleanUp(a) {
+        a.textContent = 'Downloaded';
+        a.dataset.disabled = true;
+
+        // Need a small delay for the revokeObjectURL to work properly.
+        setTimeout(function() {
+            window.URL.revokeObjectURL(a.href);
+        }, 1500);
+    };
+
+    function downloadLog() {
+        window.URL = window.webkitURL || window.URL;
+
+        var prevLink = output.querySelector('a');
+        if (prevLink) {
+            window.URL.revokeObjectURL(prevLink.href);
+            output.innerHTML = '';
+        }
+
+        var bb = new Blob([typer.textContent], {type: MIME_TYPE});
+
+        var a = document.createElement('a');
+        a.download = container.querySelector('[id="log_text"]').value;
+        a.href = window.URL.createObjectURL(bb);
+        a.textContent = 'Download ready';
+
+        a.dataset.downloadurl = [MIME_TYPE, a.download, a.href].join(':');
+        a.draggable = true; // Don't really need, but good practice.
+        a.classList.add('dragout');
+
+        output.appendChild(a);
+
+        a.onclick = function(e) {
+            if ('disabled' in this.dataset) {
+            return false;
+            }
+
+            cleanUp(this);
+        };
+    };
 </script>
 </body>
 </html>
