@@ -457,7 +457,7 @@ const MIME_TYPE = 'text/plain';
         var regex = new RegExp(str);
 
         var filteredLog = rootscope.report.log.filter(function(elem) {
-            return regex.test(elem.value.message);
+            return regex.test(formatLogEntry(elem));
         });
 
         setLog(filteredLog);
@@ -494,7 +494,10 @@ const MIME_TYPE = 'text/plain';
     }
 
     function formatLogEntry(entry) {
-        return '[' + formatTimestamp(entry.value.timestamp) + ' - ' + entry.value.context + '] ' + entry.value.message;
+        if (!entry.value.formated) {
+            entry.value.formated = '[' + formatTimestamp(entry.value.timestamp) + ' - ' + entry.value.context + '] ' + entry.value.message;
+        }
+        return entry.value.formated;
     }
 
     function init() {
