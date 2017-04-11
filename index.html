@@ -291,6 +291,17 @@ var o1 = {
 
 console.log(JSON.stringify(o1));
 
+function fillObject( o1, o2 ) {
+    o1 = (o1 || {});
+    for (var property in o2) {
+        if(o2.hasOwnProperty(property)) {
+            o1[property] = o2[property];
+        }
+    }
+
+    return o1;
+}
+
 const MIME_TYPE = 'text/plain';
     
     var app = angular.module('probReportApp', []);
@@ -367,7 +378,7 @@ const MIME_TYPE = 'text/plain';
                 // stats. Loop through the list of stat reports and build up 1 stat object
                 statList.forEach( (statGroup) => {
                     for (var key in statGroup[2]) {
-                        statFinal[key] = statGroup[2][key];
+                        statFinal[key] = fillObject( statFinal[key], statGroup[2][key]);
                     }
                 });
 
