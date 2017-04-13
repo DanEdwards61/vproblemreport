@@ -4,7 +4,7 @@
     <title>Problem Log</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
     <script src="moment.js"></script>
 
     <style>
@@ -75,6 +75,10 @@
 
 .stats-table-active-connection {
   font-weight: bold;
+}
+
+.stats-table-nonactive-connection {
+    font-weight: normal;
 }
 
 body {
@@ -159,8 +163,12 @@ th {
             </div>
         </div>
         <div class="row" id="status" ng-show="statusMessage!=''">
-            <label for="status_text">Status:</label>
+<!--            <label for="status_text">Status:</label>
             <input type="text" id="status_text" ng-model="statusMessage"></label>
+-->
+            <p ng-show="proc=='Getting data'">Loading</p>
+            <p ng-show="proc=='Building log'">Building log</p>
+            <p ng-show="proc=='Building stats'">Building stats</p>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -258,12 +266,12 @@ th {
                         </table>
                         <div class="stats-table-container">
                             <div> Stats Tables</div>
-                            <details ng-repeat="statGroup in stats[statset.key]">
+                            <details ng-repeat="statGroup in stats[statset.key]" ng-class="detailClass1(statGroup) ? 'stats-table-active-connection' : '';">
                                 <summary>{{statGroup.name}} ({{statGroup.type}})</summary>
                                 <table border="1">
                                     <tbody>
                                         <tr><th colspan="2">Statistics {{statGroup.name}}</th></tr>
-                                        <tr ng-repeat="p in statGroup.propList">
+                                        <tr ng-repeat="p in statGroup.propList.sort()">
                                             <td>{{p.key}}</td><td>{{p.val}}</td>
                                         </tr>
                                     </tbody>
@@ -280,16 +288,6 @@ var container = document.querySelector('#log_file');
 var typer = container.querySelector('[contenteditable]');
 var output = container.querySelector('output');
 
-
-var o1 = {
-    name: 'o1',
-    child: { 
-        name: 'o1_child',
-        child: null
-    }
-}
-
-console.log(JSON.stringify(o1));
 
 function fillObject( o1, o2 ) {
     o1 = (o1 || {});
@@ -320,10 +318,35 @@ const MIME_TYPE = 'text/plain';
         $scope.stats = [];
         $scope.statusMessage = '';
 
+/*                    <p ng-show="proc=='Getting data'">Loading</p>
+            <p ng-show="proc=='Building log'">Building log</p>
+            <p ng-show="proc=='Building stats'">Building stats</p>
+*/
+        $scope.proc = '';
+
         $scope.showStatus = function(msg) {
             $scope.statusMessage = msg;
         }
 
+        $scope.detailClass1 = function(stat) {
+            var v = false;
+            stat.propList.forEach( (s) => {
+                if (s.key == 'googActiveConnection' && s.val == "true") {
+                    v = true;
+                }
+            })
+            return v;
+        }
+
+        $scope.detailClass = function(stat) {
+            var v = 'stats-table-nonactive-connection';
+            stat.propList.forEach( (s) => {
+                if (s.key == 'googActiveConnection' && s.val == "true") {
+                    v = 'stats-table-active-connection';
+                }
+            })
+            return v;
+        }
         $scope.setFilterText = function() {
             getElem('filter').value = getElem('filter_list').value;
         }
@@ -333,9 +356,11 @@ const MIME_TYPE = 'text/plain';
                 return;
             }
 
-            $scope.api = [];
+            var scope_api = [];
+            var scope_stats = [];
+/*            $scope.api = [];
             $scope.stats = [];
-            for( var ndx=0; ndx<rtcStats.length; ndx++ ) {
+*/            for( var ndx=0; ndx<rtcStats.length; ndx++ ) {
                 var apiList = [];
                 var statList = [];
                 var statFinal = {};
@@ -370,7 +395,7 @@ const MIME_TYPE = 'text/plain';
                             break;
                     }
                 })
-                $scope.api.push(apiList.sort( function(a, b) {
+                scope_api.push(apiList.sort( function(a, b) {
                     // compare the last element in the array
                     return a[a.length-1] - b[b.length-1];
                 }));
@@ -400,29 +425,35 @@ const MIME_TYPE = 'text/plain';
                         finalStatGroup.push(s);
                     }
                 }
-                $scope.stats.push(finalStatGroup);
+                scope_stats.push(finalStatGroup);
             }
+            $scope.api = scope_api;
+            $scope.stats = scope_stats;
 
         }
 
         $scope.getReport = function(url) {
             $scope.showStatus( 'Downloading report...');
+            $scope.proc = 'Getting data';
 
             $http.get( url )
             .then(function(response) {
                 $scope.report = response.data;
                 setHeaders($scope.report.report);
                 $scope.showStatus('Setting log data');
+                $scope.proc = 'Building log';
 
-                setTimeout( function() {
-                    setLog($scope.report.log);
+//                setTimeout( function() {
+                setLog($scope.report.log);
 
-                    $scope.setStats($scope.report.rtcStats);
+                $scope.proc = 'Building stats';
 
-                    $scope.showStatus('');
+                $scope.setStats($scope.report.rtcStats);
 
-                    $scope.$apply();
-                }, 0);
+                $scope.showStatus('');
+                $scope.proc = '';
+                    //$scope.$apply();
+//                }, 0);
             });
         }
 
