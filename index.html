@@ -346,7 +346,7 @@ th {
             $http.get( url )
             .then(function(response) {
                 $scope.report = response.data;
-                setHeaders($scope.report.report);
+                //setHeaders($scope.report.report);
 
                 setLog($scope.report.log);
 
@@ -377,14 +377,6 @@ th {
         text: getElem('text')
     };
 
-    function setHeaders(report) {
-        header.username.innerHTML = report.UserName;
-        header.extension.innerHTML = report.Extension;
-        header.platform.innerHTML = report.Platform;
-        header.text.innerHTML = report.Text;
-    }
-
-
     function clear_filter() {
         filter('');
         getElem('filter').value = '';
@@ -395,7 +387,7 @@ th {
         var regex = new RegExp(str);
 
         var filteredLog = rootscope.report.log.filter(function(elem) {
-            return regex.test(elem.value.message);
+            return regex.test(elem);
         });
 
         setLog(filteredLog);
@@ -412,32 +404,12 @@ th {
     function setLog(log) {
         var logText = '';
         for(var i = 0; i < log.length; i++) {
-            logText = logText + formatLogEntry(log[i]) + '\n\n';
+            logText = logText + log[i] + '\n\n';
         }
         logTextArea.innerText = logText;
     }
 
-
-
-    function formatTimestamp(ts) {
-        var time = new Date(ts);
-        return time.toISOString()
-            .replace(/T/, ' ')
-            .replace(/Z/, ' ' + formatTimestampOffset(time.getTimezoneOffset()));
-    }
-
-    function formatTimestampOffset(offset) {
-        return offset > 0 ? `-${offset / 60}:00` : `${offset / 60}:00`;
-    }
-
-    function formatLogEntry(entry) {
-        return '[' + formatTimestamp(entry.value.timestamp) + ' - ' + entry.value.context + '] ' + entry.value.message;
-    }
-
     function init() {
-//        setHeaders(report.report);
-//        setLog(report.log);
-//        document.title = report.report.UserName + '-Problem Report';
     }
 
 </script>
