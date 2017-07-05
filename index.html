@@ -439,7 +439,7 @@ const MIME_TYPE = 'text/plain';
             $http.get( url )
             .then(function(response) {
                 $scope.report = response.data;
-                setHeaders($scope.report.report);
+//                setHeaders($scope.report.report);
                 $scope.showStatus('Setting log data');
                 $scope.proc = 'Building log';
 
@@ -499,7 +499,7 @@ const MIME_TYPE = 'text/plain';
         var regex = new RegExp(str);
 
         var filteredLog = rootscope.report.log.filter(function(elem) {
-            return regex.test(formatLogEntry(elem));
+            return regex.test(elem);
         });
 
         setLog(filteredLog);
@@ -536,10 +536,12 @@ const MIME_TYPE = 'text/plain';
     }
 
     function formatLogEntry(entry) {
-        if (!entry.value.formated) {
+/*        if (!entry.value.formated) {
             entry.value.formated = '[' + formatTimestamp(entry.value.timestamp) + ' - ' + entry.value.context + '] ' + entry.value.message;
         }
         return entry.value.formated;
+*/
+        return entry;
     }
 
     function init() {
