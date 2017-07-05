@@ -4,16 +4,16 @@
     <title>Problem Log</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
-    <script src="moment.js"></script>
+    <script src="https://unpkg.com/vue"></script>
 
     <style>
 
     .log-container {
         width: 100%;
-        height: 200px;
-        overflow-y: none;
+        height: 300px;
+        overflow-y: scroll;
         overflow-x: none;
+        resize: both;
     }
 
 
@@ -155,68 +155,41 @@ th {
 
 <body onload="init()">
 
-    <div class="container" ng-app="probReportApp" ng-controller="probReportCtrl">
+    <div class="container" id="vpwpr_log">
         <div class="row">
             <div class="col-md-12">
                 <h2>Problem Report</h2>
                 <hr/>
             </div>
         </div>
-        <div class="row" id="status" ng-show="statusMessage!=''">
-<!--            <label for="status_text">Status:</label>
-            <input type="text" id="status_text" ng-model="statusMessage"></label>
--->
-            <p ng-show="proc=='Getting data'">Loading</p>
-            <p ng-show="proc=='Building log'">Building log</p>
-            <p ng-show="proc=='Building stats'">Building stats</p>
-        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="reportURL">Report URL:</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="reportURL" ng-model="rawReport" value="https://api.dev1.vappcenter.com/v1/download/16/6daaff74-9e51-416c-8a10-30d32433807a"/>
+                        <input type="text" class="form-control" id="reportURL" v-model="rawReport" value="https://api.dev1.vappcenter.com/v1/download/16/6daaff74-9e51-416c-8a10-30d32433807a"/>
                         <div class="input-group-btn">
-                            <input type="button" class="btn btn-primary" value="Load" ng-click="getReport(rawReport)"/>
+                            <input type="button" class="btn btn-primary" value="Load" onclick="getReport(getElem('reportURL').value)"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row" id='row.log'>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <p class="form-control-static" id="username" ng-model="userName"></p>
-                </div>
-                <div class="form-group">
-                    <label for="extension">Extension</label>
-                    <p class="form-control-static" id="extension"></p>
-                </div>
-                <div class="form-group">
-                    <label for="platform">Platform</label>
-                    <p class="form-control-static" id="platform"></p>
-                </div>
-                <div class="form-group">
-                    <label for="text">Text</label>
-                    <p class="form-control-static" id="text"></p>
-                </div>
-            </div>
-
-            <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label for="filter">Filter</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="filter" ng-model="selectedFilter" onkeypress="filterPress(event, getElem('filter').value)"/>
-                        <select id="filter" class="form-control" id="filter_list" ng-model="selectedFilter">
-                            <option></option>
+                        <input type="text" class="form-control" id="filter" v-model="selectedFilter" v-on:keyup.enter="filterPress(getElem('filter').value)"/>
+                        <select id="filter" class="form-control" id="filter_list" v-model="selectedFilter">
                             <option>(CallMake|CallNotification,|CallDone)</option>
                             <option>(WCAPI message received|Sending WCAPI message)</option>
+                            <option>sip.transport</option>
                         </select>
 
                         <div class="input-group-btn">
-                            <input type="button" class="btn btn-primary" value="Filter" onclick="filter(getElem('filter').value)"/>
+                            <input type="button" class="btn btn-primary" value="Filter" onclick="filterPress(getElem('filter').value)"/>
                         </div>
                         <div class="input-group-btn">
                             <input type="button" class="btn btn-primary" value="Clear" onclick="clear_filter()"/>
@@ -226,8 +199,8 @@ th {
                 <div class="form-group" id="log_file">
                     <label for="log">Log</label>
                     <button onclick="downloadLog()">Download log</button> <output></output>
-                    <div class="log-container" contenteditable>
-                        <textarea id="log_text" style="width:100%; height:100%;"></textarea>
+                    <div class="log-container">
+                        <pre v-for="msg in msgs"> {{ msg }} </pre>
                     </div>
                 </div>
             </div>
@@ -244,17 +217,20 @@ th {
 -->
         <div>
             <h4>RTC Stats</h4>
-            <div ng-show="!report.rtcStats || report.rtcStats.length == 0">
+
+            <div v-if="!report.rtcStats || report.rtcStats.length == 0">
                 No RTC stats in the log file
             </div>
 
-            <div ng-repeat='statset in report.rtcStats'>
+
+
+            <div v-for='statset in report.rtcStats'>
                 RTC Stat {{statset.key}}
                 <div class="row" id='row.rtcStats' class="update-log-container">
                         <div>API Trace</div>
                         <table class="update-log-table">
                             <tr><td>Time</td><td>Event</td></tr>
-                            <tr ng-repeat="v in api[statset.key]">
+                            <tr v-for="v in api[statset.key]">
                                 <td> {{formatAPITime(v[3])}}</td>
                                 <td>
                                     <details>
@@ -266,7 +242,7 @@ th {
                         </table>
                         <div class="stats-table-container">
                             <div> Stats Tables</div>
-                            <details ng-repeat="statGroup in stats[statset.key]" ng-class="detailClass1(statGroup) ? 'stats-table-active-connection' : '';">
+                            <details v-for="statGroup in stats[statset.key]" ng-class="detailClass1(statGroup) ? 'stats-table-active-connection' : '';">
                                 <summary>{{statGroup.name}} ({{statGroup.type}})</summary>
                                 <table border="1">
                                     <tbody>
@@ -280,6 +256,7 @@ th {
                         </div>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -301,10 +278,33 @@ function fillObject( o1, o2 ) {
 }
 
 const MIME_TYPE = 'text/plain';
-    
-    var app = angular.module('probReportApp', []);
-    var rootscope;
-    app.controller('probReportCtrl', function($scope, $http) {
+
+    var vpwpr_log = new Vue( {
+        el: '#vpwpr_log',
+        data: {
+            log: [],
+            msgs: [],
+            selectedFilter: '',
+            rawReport: '',
+            report: {},
+            api: {}
+        },
+
+        methods: {
+            filterPress: function(str) {
+                filter(str);
+            },
+
+
+            getElem: function(id) {
+                return document.getElementById(id);
+            }
+
+        }
+    })
+
+
+/*    app.controller('probReportCtrl', function($scope, $http) {
         rootscope = $scope;
         $scope.report = '';
 
@@ -317,11 +317,6 @@ const MIME_TYPE = 'text/plain';
         $scope.lastState;
         $scope.stats = [];
         $scope.statusMessage = '';
-
-/*                    <p ng-show="proc=='Getting data'">Loading</p>
-            <p ng-show="proc=='Building log'">Building log</p>
-            <p ng-show="proc=='Building stats'">Building stats</p>
-*/
         $scope.proc = '';
 
         $scope.showStatus = function(msg) {
@@ -347,9 +342,6 @@ const MIME_TYPE = 'text/plain';
             })
             return v;
         }
-        $scope.setFilterText = function() {
-            getElem('filter').value = getElem('filter_list').value;
-        }
 
         $scope.setStats = function (rtcStats) {
             if (!rtcStats || rtcStats.length == 0 ) {
@@ -358,9 +350,7 @@ const MIME_TYPE = 'text/plain';
 
             var scope_api = [];
             var scope_stats = [];
-/*            $scope.api = [];
-            $scope.stats = [];
-*/            for( var ndx=0; ndx<rtcStats.length; ndx++ ) {
+            for( var ndx=0; ndx<rtcStats.length; ndx++ ) {
                 var apiList = [];
                 var statList = [];
                 var statFinal = {};
@@ -432,18 +422,24 @@ const MIME_TYPE = 'text/plain';
 
         }
 
-        $scope.getReport = function(url) {
-            $scope.showStatus( 'Downloading report...');
-            $scope.proc = 'Getting data';
+*/
 
-            $http.get( url )
-            .then(function(response) {
+        function getReport(url) {
+
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
+                    var rpt = JSON.parse(xmlHttp.responseText);
+
+                    vpwpr_log.report = rpt;
+                    vpwpr_log.log = rpt.log;
+                    setLog(rpt.log);
+
+/*
                 $scope.report = response.data;
-//                setHeaders($scope.report.report);
                 $scope.showStatus('Setting log data');
                 $scope.proc = 'Building log';
 
-//                setTimeout( function() {
                 setLog($scope.report.log);
 
                 $scope.proc = 'Building stats';
@@ -452,41 +448,43 @@ const MIME_TYPE = 'text/plain';
 
                 $scope.showStatus('');
                 $scope.proc = '';
-                    //$scope.$apply();
-//                }, 0);
+*/
+
+                }
+            }
+            xmlHttp.open( "GET", url) 
+            xmlHttp.send( null );
+
+/*
+            $http.get( url )
+            .then(function(response) {
+                $scope.report = response.data;
+                $scope.showStatus('Setting log data');
+                $scope.proc = 'Building log';
+
+                vpwpr_log.log = $scope.report.log;
+                setLog($scope.report.log);
+
+                $scope.proc = 'Building stats';
+
+                $scope.setStats($scope.report.rtcStats);
+
+                $scope.showStatus('');
+                $scope.proc = '';
             });
+*/
         }
 
-        $scope.formatAPITime = function(d) {
-            return moment(d).format('MM/DD h:mm:ss.SSS');
-        }
-
+/*
         $scope.show = function(what) {
             active_view = what;
         }
     });
-
-
-//    var report = JSON.parse(document.getElementById('report').textContent);
+*/
 
     function getElem(id) {
         return document.getElementById(id);
     }
-
-    var header = {
-        username: getElem('username'),
-        extension: getElem('extension'),
-        platform: getElem('platform'),
-        text: getElem('text')
-    };
-
-    function setHeaders(report) {
-        header.username.innerHTML = report.UserName;
-        header.extension.innerHTML = report.Extension;
-        header.platform.innerHTML = report.Platform;
-        header.text.innerHTML = report.Text;
-    }
-
 
     function clear_filter() {
         filter('');
@@ -494,16 +492,14 @@ const MIME_TYPE = 'text/plain';
     }
 
     function filter(str) {
-        rootscope.statusMessage = 'Filtering log file'
 
         var regex = new RegExp(str);
 
-        var filteredLog = rootscope.report.log.filter(function(elem) {
+        var filteredLog = vpwpr_log.log.filter(function(elem) {
             return regex.test(elem);
         });
 
         setLog(filteredLog);
-        rootscope.statusMessage = ''
     }
 
     function filterPress(evt, val) {
@@ -515,39 +511,15 @@ const MIME_TYPE = 'text/plain';
     var logTextArea = getElem('log_text');
 
     function setLog(log) {
-        var logText = '';
-        for(var i = 0; i < log.length; i++) {
-            logText = logText + formatLogEntry(log[i]) + '\n\n';
-        }
-        logTextArea.innerText = logText;
+        vpwpr_log.msgs = log;
     }
 
-
-
-    function formatTimestamp(ts) {
-        var time = new Date(ts);
-        return time.toISOString()
-            .replace(/T/, ' ')
-            .replace(/Z/, ' ' + formatTimestampOffset(time.getTimezoneOffset()));
-    }
-
-    function formatTimestampOffset(offset) {
-        return offset > 0 ? `-${offset / 60}:00` : `${offset / 60}:00`;
-    }
 
     function formatLogEntry(entry) {
-/*        if (!entry.value.formated) {
-            entry.value.formated = '[' + formatTimestamp(entry.value.timestamp) + ' - ' + entry.value.context + '] ' + entry.value.message;
-        }
-        return entry.value.formated;
-*/
         return entry;
     }
 
     function init() {
-//        setHeaders(report.report);
-//        setLog(report.log);
-//        document.title = report.report.UserName + '-Problem Report';
     }
 
 
