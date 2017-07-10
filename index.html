@@ -1,10 +1,15 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Problem Log</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
     <script src="https://unpkg.com/vue"></script>
+
+<!--
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" />
+    <script src="vue.js"></script>
+-->
+    <script src="moment.js"></script>
 
     <style>
 
@@ -215,23 +220,22 @@ th {
               "googInitiator": "false"
             },
 -->
-        <div>
+        <div class="row">
             <h4>RTC Stats</h4>
 
-            <div v-if="!report.rtcStats || report.rtcStats.length == 0">
+            <div class="col-md-12" v-if="!report.rtcStats || report.rtcStats.length == 0">
                 No RTC stats in the log file
             </div>
 
 
-
-            <div v-for='statset in report.rtcStats'>
+            <div class="col-md-12" v-for='statset in report.rtcStats'>
                 RTC Stat {{statset.key}}
                 <div class="row" id='row.rtcStats' class="update-log-container">
                         <div>API Trace</div>
                         <table class="update-log-table">
                             <tr><td>Time</td><td>Event</td></tr>
                             <tr v-for="v in api[statset.key]">
-                                <td> {{formatAPITime(v[3])}}</td>
+                                    <td> {{formatAPITime(v[3])}}</td>
                                 <td>
                                     <details>
                                         <summary>{{v[0]}}</summary>
@@ -242,12 +246,12 @@ th {
                         </table>
                         <div class="stats-table-container">
                             <div> Stats Tables</div>
-                            <details v-for="statGroup in stats[statset.key]" ng-class="detailClass1(statGroup) ? 'stats-table-active-connection' : '';">
+                            <details v-for="statGroup in stats[statset.key]" v-bind:class="detailClass(statGroup)">
                                 <summary>{{statGroup.name}} ({{statGroup.type}})</summary>
                                 <table border="1">
                                     <tbody>
                                         <tr><th colspan="2">Statistics {{statGroup.name}}</th></tr>
-                                        <tr ng-repeat="p in statGroup.propList.sort()">
+                                        <tr v-for="p in statGroup.propList.sort()">
                                             <td>{{p.key}}</td><td>{{p.val}}</td>
                                         </tr>
                                     </tbody>
@@ -283,11 +287,13 @@ const MIME_TYPE = 'text/plain';
         el: '#vpwpr_log',
         data: {
             log: [],
+            rtcStats: [],
             msgs: [],
             selectedFilter: '',
             rawReport: '',
             report: {},
-            api: {}
+            stats: [],
+            api: []
         },
 
         methods: {
@@ -298,8 +304,21 @@ const MIME_TYPE = 'text/plain';
 
             getElem: function(id) {
                 return document.getElementById(id);
-            }
+            },
 
+            formatAPITime: function(d) {
+                return moment(d).format('MM/DD h:mm:ss.SSS');
+            },
+
+            detailClass: function(stat) {
+                var v = false;
+                stat.propList.forEach( (s) => {
+                    if (s.key == 'googActiveConnection' && s.val == "true") {
+                        v = true;
+                    }
+                })
+                return (v ? 'stats-table-active-connection' : '');
+            }
         }
     })
 
@@ -434,6 +453,7 @@ const MIME_TYPE = 'text/plain';
                     vpwpr_log.report = rpt;
                     vpwpr_log.log = rpt.log;
                     setLog(rpt.log);
+                    setStats(rpt.rtcStats);
 
 /*
                 $scope.report = response.data;
@@ -475,13 +495,6 @@ const MIME_TYPE = 'text/plain';
 */
         }
 
-/*
-        $scope.show = function(what) {
-            active_view = what;
-        }
-    });
-*/
-
     function getElem(id) {
         return document.getElementById(id);
     }
@@ -508,7 +521,84 @@ const MIME_TYPE = 'text/plain';
         }
     }
 
-    var logTextArea = getElem('log_text');
+    function setStats(rtcStats) {
+        if (!rtcStats || rtcStats.length == 0 ) {
+            return;
+        }
+
+        var scope_api = [];
+        var scope_stats = [];
+        for( var ndx=0; ndx<rtcStats.length; ndx++ ) {
+            var apiList = [];
+            var statList = [];
+            var statFinal = {};
+
+            rtcStats[ndx].value.forEach( (stat) => {
+                switch(stat[0]) 
+                {
+                    case 'getstats':
+                        statList.push(stat);
+                        break;
+
+                    case 'setRemoteDescription':
+                    case 'createAnswerOnSuccess':
+                    case 'setLocalDescription':
+                        var sdpInfo = stat[2];
+                        var pre = 'type: ' + sdpInfo.type + '\nsdp:' + sdpInfo.sdp.replace('\r\n', '\n');
+                        stat[2] = pre;
+                        apiList.push(stat);
+                        break;
+
+                    case 'setLocalDescriptionOnSuccess':
+                    case 'setRemoteDescriptionOnSuccess':
+                    case 'setLocalDescriptionOnFailure':
+                    case 'setRemoteDescriptionOnFailure':
+                    case 'onnegotiationneeded':
+                        stat.push(stat[2]);      // These events are not stored with an object from rtcStats, so time is in element 2, instead of element 3.
+                        apiList.push(stat);
+                        break;
+
+                    default:
+                        apiList.push(stat);
+                        break;
+                }
+            })
+            scope_api.push(apiList.sort( function(a, b) {
+                // compare the last element in the array
+                return a[a.length-1] - b[b.length-1];
+            }));
+            // The compression algorithm strips properties that are duplicates between each group offset
+            // stats. Loop through the list of stat reports and build up 1 stat object
+            statList.forEach( (statGroup) => {
+                for (var key in statGroup[2]) {
+                    statFinal[key] = fillObject( statFinal[key], statGroup[2][key]);
+                }
+            });
+
+            var finalStatGroup = [];
+            var propsToRemove = [ 'id', 'timestamp', 'type'];
+            for (var prop in statFinal) {
+                if (statFinal.hasOwnProperty(prop)) {
+                    var propObj = statFinal[prop];
+                    var s = {name: prop, timestamp: propObj.timestamp, type:propObj.type, propList: [] };
+                    propsToRemove.forEach( (toRemove) => {
+                        delete propObj[toRemove];
+                    });
+
+                    for( var p1 in propObj) {
+                        if (propObj.hasOwnProperty(p1)) {
+                            s.propList.push({key: p1, val: propObj[p1]})
+                        }
+                    }
+                    finalStatGroup.push(s);
+                }
+            }
+            scope_stats.push(finalStatGroup);
+        }
+
+        vpwpr_log.api = scope_api;
+        vpwpr_log.stats = scope_stats;
+    }
 
     function setLog(log) {
         vpwpr_log.msgs = log;
