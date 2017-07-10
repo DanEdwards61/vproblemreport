@@ -1,0 +1,1498 @@
+{
+    "files": [],
+    "rtcStats": [
+        {
+            "key": 0,
+            "value": [
+                [
+                    "getUserMedia",
+                    null,
+                    {
+                        "video": true,
+                        "audio": true
+                    },
+                    1498836973359
+                ],
+                [
+                    "getUserMediaOnSuccess",
+                    null,
+                    {
+                        "id": "k9YiMkdJE9cdqojYvARr7slqiu51NJo0lm7a",
+                        "tracks": [
+                            {
+                                "id": "2538dfc0-c546-43ac-a4a0-ba32d912cc9c",
+                                "kind": "audio",
+                                "label": "Communications",
+                                "enabled": true,
+                                "muted": false,
+                                "readyState": "live"
+                            },
+                            {
+                                "id": "d3abb7f6-03d3-4cc3-818a-96765a113466",
+                                "kind": "video",
+                                "label": "Webcam C170 (046d:082b)",
+                                "enabled": true,
+                                "muted": false,
+                                "readyState": "live"
+                            }
+                        ]
+                    },
+                    1498836974266
+                ],
+                [
+                    "create",
+                    "PC_0",
+                    {
+                        "iceServers": [
+                            {
+                                "url": "stun:stun.l.google.com:19302"
+                            }
+                        ],
+                        "browserType": "webkit"
+                    },
+                    1498837031929
+                ],
+                [
+                    "setRemoteDescription",
+                    "PC_0",
+                    {
+                        "type": "offer",
+                        "sdp": "v=0\r\no=FreeSWITCH 1498816132 1498816133 IN IP4 172.23.10.91\r\ns=FreeSWITCH\r\nc=IN IP4 172.23.10.91\r\nt=0 0\r\na=msid-semantic: WMS ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\nm=audio 20900 RTP/SAVPF 0 8\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=fingerprint:sha-256 09:63:A6:CD:80:79:EE:E4:D7:D4:48:00:89:F9:19:D0:D6:FC:3E:9B:AC:F2:51:E0:06:A9:DE:8C:7A:92:F3:9C\r\na=setup:actpass\r\na=rtcp-mux\r\na=rtcp:20900 IN IP4 172.23.10.91\r\na=ssrc:3311530168 cname:B4jsRUf1SD3LHexj\r\na=ssrc:3311530168 msid:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN a0\r\na=ssrc:3311530168 mslabel:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\na=ssrc:3311530168 label:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbNa0\r\na=ice-ufrag:fyysdozFOKpobq2D\r\na=ice-pwd:lbV2V0UEuNf1SDbX1zf4OEzt\r\na=candidate:9227753840 1 udp 659136 172.23.10.91 20900 typ host generation 0\r\na=candidate:8513607212 1 udp 659136 76.127.233.199 20900 typ host generation 0\r\na=candidate:9227753840 2 udp 659136 172.23.10.91 20900 typ host generation 0\r\na=candidate:8513607212 2 udp 659136 76.127.233.199 20900 typ host generation 0\r\na=ptime:20\r\nm=video 20830 RTP/SAVPF 100\r\nb=AS:1024\r\na=rtpmap:100 VP8/90000\r\na=fingerprint:sha-256 09:63:A6:CD:80:79:EE:E4:D7:D4:48:00:89:F9:19:D0:D6:FC:3E:9B:AC:F2:51:E0:06:A9:DE:8C:7A:92:F3:9C\r\na=setup:actpass\r\na=rtcp-mux\r\na=rtcp:20830 IN IP4 172.23.10.91\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 ccm tmmbr\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=ssrc:2562132540 cname:B4jsRUf1SD3LHexj\r\na=ssrc:2562132540 msid:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN v0\r\na=ssrc:2562132540 mslabel:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\na=ssrc:2562132540 label:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbNv0\r\na=ice-ufrag:rr0CWO5okJr5Gwmf\r\na=ice-pwd:BrA5szjR2Wd0nNgE476RL26W\r\na=candidate:9491188261 1 udp 659136 172.23.10.91 20830 typ host generation 0\r\na=candidate:0868827939 1 udp 659136 76.127.233.199 20830 typ host generation 0\r\na=candidate:9491188261 2 udp 659135 172.23.10.91 20830 typ host generation 0\r\na=candidate:0868827939 2 udp 659135 76.127.233.199 20830 typ host generation 0\r\na=end-of-candidates\r\na=inactive\r\n"
+                    },
+                    1498837031952
+                ],
+                [
+                    "onsignalingstatechange",
+                    "PC_0",
+                    "have-remote-offer",
+                    1498837032091
+                ],
+                [
+                    "setRemoteDescriptionOnSuccess",
+                    "PC_0",
+                    1498837032096
+                ],
+                [
+                    "onaddstream",
+                    "PC_0",
+                    "ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN audio:a0",
+                    1498837032299
+                ],
+                [
+                    "getstats",
+                    "PC_0",
+                    {
+                        "googLibjingleSession_8158323790077533259": {
+                            "id": "googLibjingleSession_8158323790077533259",
+                            "timestamp": 1498837032931,
+                            "type": "googLibjingleSession",
+                            "googInitiator": "false"
+                        },
+                        "googTrack_a0": {
+                            "id": "googTrack_a0",
+                            "timestamp": 1498837032931,
+                            "type": "googTrack",
+                            "googTrackId": "a0"
+                        },
+                        "googCertificate_70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C": {
+                            "id": "googCertificate_70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C",
+                            "timestamp": 1498837032931,
+                            "type": "googCertificate",
+                            "googFingerprint": "70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C",
+                            "googFingerprintAlgorithm": "sha-256",
+                            "googDerBase64": "MIIBFjCBvaADAgECAgkA70mQKDmkPzEwCgYIKoZIzj0EAwIwETEPMA0GA1UEAwwGV2ViUlRDMB4XDTE3MDYyOTE1MzcxMVoXDTE3MDczMDE1MzcxMVowETEPMA0GA1UEAwwGV2ViUlRDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEPFJJRYR5Jr+Ek2ATRxc2hybfk3AbAzx4Z8lrZS8af3QlqckzQY9h8FnxcYmm1x3zn8jutZd1VsxfJh3v2+ZljTAKBggqhkjOPQQDAgNIADBFAiEAsMNlW11vrkxk49uCXiIF5EF6jpflgSF2IBJsUOGbfD8CIBF1XpFlC4nA541pnmIfXyfEIVOm95vtEIA3so63ttyJ"
+                        },
+                        "Channel-audio-1": {
+                            "id": "Channel-audio-1",
+                            "timestamp": 1498837032931,
+                            "type": "googComponent",
+                            "googComponent": "1",
+                            "localCertificateId": "googCertificate_70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C"
+                        },
+                        "Channel-video-1": {
+                            "id": "Channel-video-1",
+                            "timestamp": 1498837032931,
+                            "type": "googComponent",
+                            "googComponent": "1",
+                            "localCertificateId": "googCertificate_70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C"
+                        },
+                        "ssrc_3311530168_recv": {
+                            "id": "ssrc_3311530168_recv",
+                            "timestamp": 1498837032931,
+                            "type": "ssrc",
+                            "googCaptureStartNtpTimeMs": "0",
+                            "packetsLost": "0",
+                            "googSecondaryDecodedRate": "0",
+                            "googDecodingPLC": "0",
+                            "packetsReceived": "0",
+                            "googJitterReceived": "0",
+                            "googDecodingCNG": "0",
+                            "ssrc": "3311530168",
+                            "googPreferredJitterBufferMs": "0",
+                            "googSpeechExpandRate": "0",
+                            "googTrackId": "a0",
+                            "transportId": "Channel-audio-1",
+                            "mediaType": "audio",
+                            "googDecodingCTN": "0",
+                            "googDecodingPLCCNG": "0",
+                            "googCodecName": "",
+                            "googDecodingNormal": "0",
+                            "googAccelerateRate": "0",
+                            "bytesReceived": "0",
+                            "googCurrentDelayMs": "0",
+                            "googDecodingCTSG": "0",
+                            "googExpandRate": "0",
+                            "googPreemptiveExpandRate": "0",
+                            "googJitterBufferMs": "0",
+                            "googDecodingMuted": "0"
+                        },
+                        "ssrc_2562132540_recv": {
+                            "id": "ssrc_2562132540_recv",
+                            "timestamp": 1498837032931,
+                            "type": "ssrc",
+                            "googCaptureStartNtpTimeMs": "0",
+                            "googTargetDelayMs": "0",
+                            "packetsLost": "0",
+                            "googDecodeMs": "0",
+                            "googFrameHeightReceived": "0",
+                            "packetsReceived": "0",
+                            "ssrc": "2562132540",
+                            "googFrameRateDecoded": "0",
+                            "googMaxDecodeMs": "0",
+                            "googTrackId": "v0",
+                            "googFrameWidthReceived": "0",
+                            "codecImplementationName": "unknown",
+                            "transportId": "Channel-video-1",
+                            "mediaType": "video",
+                            "googCodecName": "",
+                            "googFrameRateReceived": "0",
+                            "framesDecoded": "0",
+                            "googNacksSent": "0",
+                            "googFirsSent": "0",
+                            "bytesReceived": "0",
+                            "googCurrentDelayMs": "0",
+                            "googRenderDelayMs": "10",
+                            "googMinPlayoutDelayMs": "0",
+                            "googFrameRateOutput": "0",
+                            "googJitterBufferMs": "0",
+                            "googPlisSent": "0"
+                        },
+                        "bweforvideo": {
+                            "id": "bweforvideo",
+                            "timestamp": 1498837032931,
+                            "type": "VideoBwe",
+                            "googActualEncBitrate": "0",
+                            "googAvailableSendBandwidth": "300000",
+                            "googRetransmitBitrate": "0",
+                            "googAvailableReceiveBandwidth": "0",
+                            "googTargetEncBitrate": "0",
+                            "googBucketDelay": "0",
+                            "googTransmitBitrate": "0"
+                        },
+                        "timestamp": "2017-06-30T15:37:12.933Z"
+                    },
+                    1498837032933
+                ],
+                [
+                    "getstats",
+                    "PC_0",
+                    {
+                        "timestamp": "2017-06-30T15:37:13.934Z"
+                    },
+                    1498837033934
+                ],
+                [
+                    "getUserMedia",
+                    null,
+                    {
+                        "audio": {
+                            "optional": [
+                                {
+                                    "sourceId": "default"
+                                }
+                            ]
+                        },
+                        "video": false
+                    },
+                    1498837034605
+                ],
+                [
+                    "getUserMediaOnSuccess",
+                    null,
+                    {
+                        "id": "SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5",
+                        "tracks": [
+                            {
+                                "id": "7e92d50d-3c63-4d96-b0cd-640cd522e61e",
+                                "kind": "audio",
+                                "label": "Default",
+                                "enabled": true,
+                                "muted": false,
+                                "readyState": "live"
+                            }
+                        ]
+                    },
+                    1498837034631
+                ],
+                [
+                    "addStream",
+                    "PC_0",
+                    "SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5 audio:7e92d50d-3c63-4d96-b0cd-640cd522e61e",
+                    1498837034632
+                ],
+                [
+                    "createAnswer",
+                    "PC_0",
+                    null,
+                    1498837034634
+                ],
+                [
+                    "createAnswerOnSuccess",
+                    "PC_0",
+                    {
+                        "type": "answer",
+                        "sdp": "v=0\r\no=- 8158323790077533259 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=msid-semantic: WMS SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\r\nm=audio 9 RTP/SAVPF 0 8\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:3TS6\r\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:audio\r\na=sendrecv\r\na=rtcp-mux\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=ssrc:115063965 cname:gPeu5Tmv/UXRcFEy\r\na=ssrc:115063965 msid:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5 7e92d50d-3c63-4d96-b0cd-640cd522e61e\r\na=ssrc:115063965 mslabel:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\r\na=ssrc:115063965 label:7e92d50d-3c63-4d96-b0cd-640cd522e61e\r\nm=video 9 RTP/SAVPF 100\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:FGXm\r\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:video\r\na=inactive\r\na=rtcp-mux\r\na=rtpmap:100 VP8/90000\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\n"
+                    },
+                    1498837034635
+                ],
+                [
+                    "setLocalDescription",
+                    "PC_0",
+                    {
+                        "type": "answer",
+                        "sdp": "v=0\r\no=- 8158323790077533259 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=msid-semantic: WMS SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\r\nm=audio 9 RTP/SAVPF 0 8\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:3TS6\r\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:audio\r\na=sendrecv\r\na=rtcp-mux\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=ssrc:115063965 cname:gPeu5Tmv/UXRcFEy\r\na=ssrc:115063965 msid:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5 7e92d50d-3c63-4d96-b0cd-640cd522e61e\r\na=ssrc:115063965 mslabel:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\r\na=ssrc:115063965 label:7e92d50d-3c63-4d96-b0cd-640cd522e61e\r\nm=video 9 RTP/SAVPF 100\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:FGXm\r\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:video\r\na=inactive\r\na=rtcp-mux\r\na=rtpmap:100 VP8/90000\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\n"
+                    },
+                    1498837034636
+                ],
+                [
+                    "onnegotiationneeded",
+                    "PC_0",
+                    1498837034637
+                ],
+                [
+                    "onsignalingstatechange",
+                    "PC_0",
+                    "stable",
+                    1498837034638
+                ],
+                [
+                    "oniceconnectionstatechange",
+                    "PC_0",
+                    "checking",
+                    1498837034640
+                ],
+                [
+                    "setLocalDescriptionOnSuccess",
+                    "PC_0",
+                    1498837034642
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 ufrag 3TS6 network-id 4 network-cost 50",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034644
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 ufrag 3TS6 network-id 3",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034644
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 ufrag 3TS6 network-id 2",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034645
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 ufrag 3TS6 network-id 1",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034648
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 ufrag FGXm network-id 4 network-cost 50",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034649
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 ufrag FGXm network-id 3",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034649
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 ufrag FGXm network-id 2",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034650
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 ufrag FGXm network-id 1",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034650
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 ufrag 3TS6 network-id 4 network-cost 50",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034743
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 ufrag 3TS6 network-id 3",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034744
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 ufrag 3TS6 network-id 2",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034744
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 ufrag 3TS6 network-id 1",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034744
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 ufrag FGXm network-id 4 network-cost 50",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034745
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 ufrag FGXm network-id 3",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034745
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 ufrag FGXm network-id 2",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034745
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 ufrag FGXm network-id 1",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034746
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 ufrag 3TS6 network-id 1",
+                        "sdpMid": "audio",
+                        "sdpMLineIndex": 0
+                    },
+                    1498837034748
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    {
+                        "candidate": "candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 ufrag FGXm network-id 1",
+                        "sdpMid": "video",
+                        "sdpMLineIndex": 1
+                    },
+                    1498837034749
+                ],
+                [
+                    "onicecandidate",
+                    "PC_0",
+                    null,
+                    1498837034795
+                ],
+                [
+                    "getstats",
+                    "PC_0",
+                    {
+                        "googTrack_7e92d50d-3c63-4d96-b0cd-640cd522e61e": {
+                            "id": "googTrack_7e92d50d-3c63-4d96-b0cd-640cd522e61e",
+                            "timestamp": 1498837034931,
+                            "type": "googTrack",
+                            "googTrackId": "7e92d50d-3c63-4d96-b0cd-640cd522e61e"
+                        },
+                        "Conn-audio-1-0": {
+                            "id": "Conn-audio-1-0",
+                            "timestamp": 1498837034931,
+                            "type": "googCandidatePair",
+                            "responsesSent": "0",
+                            "requestsReceived": "0",
+                            "googRemoteCandidateType": "local",
+                            "googReadable": "false",
+                            "googLocalAddress": "172.23.10.50:55393",
+                            "consentRequestsSent": "3",
+                            "googTransportType": "udp",
+                            "googChannelId": "Channel-audio-1",
+                            "googLocalCandidateType": "local",
+                            "googWritable": "false",
+                            "requestsSent": "3",
+                            "googRemoteAddress": "172.23.10.91:20900",
+                            "googRtt": "3000",
+                            "googActiveConnection": "false",
+                            "packetsDiscardedOnSend": "0",
+                            "bytesReceived": "0",
+                            "responsesReceived": "0",
+                            "remoteCandidateId": "Cand-KkgBAduC",
+                            "localCandidateId": "Cand-RuikI3dW",
+                            "bytesSent": "0",
+                            "packetsSent": "0"
+                        },
+                        "Cand-RuikI3dW": {
+                            "id": "Cand-RuikI3dW",
+                            "timestamp": 1498837034931,
+                            "type": "localcandidate",
+                            "portNumber": "55393",
+                            "networkType": "lan",
+                            "ipAddress": "172.23.10.50",
+                            "transport": "udp",
+                            "candidateType": "host",
+                            "priority": "2122063615"
+                        },
+                        "Cand-KkgBAduC": {
+                            "id": "Cand-KkgBAduC",
+                            "timestamp": 1498837034931,
+                            "type": "remotecandidate",
+                            "portNumber": "20900",
+                            "ipAddress": "172.23.10.91",
+                            "transport": "udp",
+                            "candidateType": "host",
+                            "priority": "659136"
+                        },
+                        "Conn-audio-1-1": {
+                            "id": "Conn-audio-1-1",
+                            "timestamp": 1498837034931,
+                            "type": "googCandidatePair",
+                            "responsesSent": "0",
+                            "requestsReceived": "0",
+                            "googRemoteCandidateType": "local",
+                            "googReadable": "false",
+                            "googLocalAddress": "172.23.10.50:55393",
+                            "consentRequestsSent": "3",
+                            "googTransportType": "udp",
+                            "googChannelId": "Channel-audio-1",
+                            "googLocalCandidateType": "local",
+                            "googWritable": "false",
+                            "requestsSent": "3",
+                            "googRemoteAddress": "76.127.233.199:20900",
+                            "googRtt": "3000",
+                            "googActiveConnection": "false",
+                            "packetsDiscardedOnSend": "0",
+                            "bytesReceived": "0",
+                            "responsesReceived": "0",
+                            "remoteCandidateId": "Cand-q5NtMyw6",
+                            "localCandidateId": "Cand-RuikI3dW",
+                            "bytesSent": "0",
+                            "packetsSent": "0"
+                        },
+                        "Cand-q5NtMyw6": {
+                            "id": "Cand-q5NtMyw6",
+                            "timestamp": 1498837034931,
+                            "type": "remotecandidate",
+                            "portNumber": "20900",
+                            "ipAddress": "76.127.233.199",
+                            "transport": "udp",
+                            "candidateType": "host",
+                            "priority": "659136"
+                        },
+                        "Conn-video-1-0": {
+                            "id": "Conn-video-1-0",
+                            "timestamp": 1498837034931,
+                            "type": "googCandidatePair",
+                            "responsesSent": "0",
+                            "requestsReceived": "0",
+                            "googRemoteCandidateType": "local",
+                            "googReadable": "false",
+                            "googLocalAddress": "172.23.10.50:55397",
+                            "consentRequestsSent": "3",
+                            "googTransportType": "udp",
+                            "googChannelId": "Channel-video-1",
+                            "googLocalCandidateType": "local",
+                            "googWritable": "false",
+                            "requestsSent": "3",
+                            "googRemoteAddress": "172.23.10.91:20830",
+                            "googRtt": "3000",
+                            "googActiveConnection": "false",
+                            "packetsDiscardedOnSend": "0",
+                            "bytesReceived": "0",
+                            "responsesReceived": "0",
+                            "remoteCandidateId": "Cand-1nOT02UD",
+                            "localCandidateId": "Cand-Lwb5Q1uD",
+                            "bytesSent": "0",
+                            "packetsSent": "0"
+                        },
+                        "Cand-Lwb5Q1uD": {
+                            "id": "Cand-Lwb5Q1uD",
+                            "timestamp": 1498837034931,
+                            "type": "localcandidate",
+                            "portNumber": "55397",
+                            "networkType": "lan",
+                            "ipAddress": "172.23.10.50",
+                            "transport": "udp",
+                            "candidateType": "host",
+                            "priority": "2122063615"
+                        },
+                        "Cand-1nOT02UD": {
+                            "id": "Cand-1nOT02UD",
+                            "timestamp": 1498837034931,
+                            "type": "remotecandidate",
+                            "portNumber": "20830",
+                            "ipAddress": "172.23.10.91",
+                            "transport": "udp",
+                            "candidateType": "host",
+                            "priority": "659136"
+                        },
+                        "Conn-video-1-1": {
+                            "id": "Conn-video-1-1",
+                            "timestamp": 1498837034931,
+                            "type": "googCandidatePair",
+                            "responsesSent": "0",
+                            "requestsReceived": "0",
+                            "googRemoteCandidateType": "local",
+                            "googReadable": "false",
+                            "googLocalAddress": "172.23.10.50:55397",
+                            "consentRequestsSent": "3",
+                            "googTransportType": "udp",
+                            "googChannelId": "Channel-video-1",
+                            "googLocalCandidateType": "local",
+                            "googWritable": "false",
+                            "requestsSent": "3",
+                            "googRemoteAddress": "76.127.233.199:20830",
+                            "googRtt": "3000",
+                            "googActiveConnection": "false",
+                            "packetsDiscardedOnSend": "0",
+                            "bytesReceived": "0",
+                            "responsesReceived": "0",
+                            "remoteCandidateId": "Cand-5ktbTmsP",
+                            "localCandidateId": "Cand-Lwb5Q1uD",
+                            "bytesSent": "0",
+                            "packetsSent": "0"
+                        },
+                        "Cand-5ktbTmsP": {
+                            "id": "Cand-5ktbTmsP",
+                            "timestamp": 1498837034931,
+                            "type": "remotecandidate",
+                            "portNumber": "20830",
+                            "ipAddress": "76.127.233.199",
+                            "transport": "udp",
+                            "candidateType": "host",
+                            "priority": "659136"
+                        },
+                        "ssrc_115063965_send": {
+                            "id": "ssrc_115063965_send",
+                            "timestamp": 1498837034931,
+                            "type": "ssrc",
+                            "audioInputLevel": "63",
+                            "transportId": "Channel-audio-1",
+                            "mediaType": "audio",
+                            "googResidualEchoLikelihood": "0",
+                            "googEchoCancellationReturnLoss": "-100",
+                            "googCodecName": "PCMU",
+                            "googResidualEchoLikelihoodRecentMax": "0",
+                            "googEchoCancellationQualityMin": "0",
+                            "googTrackId": "7e92d50d-3c63-4d96-b0cd-640cd522e61e",
+                            "ssrc": "115063965",
+                            "googTypingNoiseState": "false",
+                            "googEchoCancellationReturnLossEnhancement": "-100",
+                            "packetsSent": "0",
+                            "bytesSent": "0",
+                            "aecDivergentFilterFraction": "-1"
+                        },
+                        "timestamp": "2017-06-30T15:37:14.933Z"
+                    },
+                    1498837034933
+                ],
+                [
+                    "oniceconnectionstatechange",
+                    "PC_0",
+                    "connected",
+                    1498837035206
+                ],
+                [
+                    "setRemoteDescription",
+                    "PC_0",
+                    {
+                        "type": "offer",
+                        "sdp": "v=0\r\no=FreeSWITCH 1498816132 1498816135 IN IP4 172.23.10.91\r\ns=FreeSWITCH\r\nc=IN IP4 172.23.10.91\r\nt=0 0\r\na=msid-semantic: WMS ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\nm=audio 20900 RTP/SAVPF 0 8\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=fingerprint:sha-256 09:63:A6:CD:80:79:EE:E4:D7:D4:48:00:89:F9:19:D0:D6:FC:3E:9B:AC:F2:51:E0:06:A9:DE:8C:7A:92:F3:9C\r\na=setup:actpass\r\na=rtcp-mux\r\na=rtcp:20900 IN IP4 172.23.10.91\r\na=ssrc:3311530168 cname:B4jsRUf1SD3LHexj\r\na=ssrc:3311530168 msid:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN a0\r\na=ssrc:3311530168 mslabel:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\na=ssrc:3311530168 label:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbNa0\r\na=ice-ufrag:fyysdozFOKpobq2D\r\na=ice-pwd:lbV2V0UEuNf1SDbX1zf4OEzt\r\na=candidate:8782674878 1 udp 659136 172.23.10.91 20900 typ host generation 0\r\na=candidate:6286478128 1 udp 659136 76.127.233.199 20900 typ host generation 0\na=candidate:8782674878 2 udp 659136 172.23.10.91 20900 typ host generation 0\r\na=candidate:6286478128 2 udp 659136 76.127.233.199 20900 typ host generation 0\na=ptime:20\r\na=sendrecv\r\nm=video 20830 RTP/SAVPF 100\r\nb=AS:1024\r\na=rtpmap:100 VP8/90000\r\na=inactive\r\na=fingerprint:sha-256 09:63:A6:CD:80:79:EE:E4:D7:D4:48:00:89:F9:19:D0:D6:FC:3E:9B:AC:F2:51:E0:06:A9:DE:8C:7A:92:F3:9C\r\na=setup:actpass\r\na=rtcp-mux\r\na=rtcp:20830 IN IP4 172.23.10.91\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 ccm tmmbr\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=ssrc:2562132540 cname:B4jsRUf1SD3LHexj\r\na=ssrc:2562132540 msid:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN v0\r\na=ssrc:2562132540 mslabel:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\na=ssrc:2562132540 label:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbNv0\r\na=ice-ufrag:rr0CWO5okJr5Gwmf\r\na=ice-pwd:BrA5szjR2Wd0nNgE476RL26W\r\na=candidate:2160328715 1 udp 659136 172.23.10.91 20830 typ host generation 0\r\na=candidate:5633370193 1 udp 659136 76.127.233.199 20830 typ host generation 0\na=candidate:2160328715 2 udp 659135 172.23.10.91 20830 typ host generation 0\r\na=candidate:5633370193 2 udp 659135 76.127.233.199 20830 typ host generation 0\na=end-of-candidates\r\n"
+                    },
+                    1498837035224
+                ],
+                [
+                    "setRemoteDescriptionOnSuccess",
+                    "PC_0",
+                    1498837035233
+                ],
+                [
+                    "getUserMedia",
+                    null,
+                    {
+                        "audio": {
+                            "optional": [
+                                {
+                                    "sourceId": "default"
+                                }
+                            ]
+                        },
+                        "video": false
+                    },
+                    1498837035234
+                ],
+                [
+                    "onsignalingstatechange",
+                    "PC_0",
+                    "have-remote-offer",
+                    1498837035238
+                ],
+                [
+                    "getUserMediaOnSuccess",
+                    null,
+                    {
+                        "id": "5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv",
+                        "tracks": [
+                            {
+                                "id": "7d4f667d-8125-412d-a6ba-b98fab647dde",
+                                "kind": "audio",
+                                "label": "Default",
+                                "enabled": true,
+                                "muted": false,
+                                "readyState": "live"
+                            }
+                        ]
+                    },
+                    1498837035243
+                ],
+                [
+                    "removeStream",
+                    "PC_0",
+                    "SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5 audio:7e92d50d-3c63-4d96-b0cd-640cd522e61e",
+                    1498837035244
+                ],
+                [
+                    "addStream",
+                    "PC_0",
+                    "5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv audio:7d4f667d-8125-412d-a6ba-b98fab647dde",
+                    1498837035245
+                ],
+                [
+                    "createAnswer",
+                    "PC_0",
+                    null,
+                    1498837035247
+                ],
+                [
+                    "createAnswerOnSuccess",
+                    "PC_0",
+                    {
+                        "type": "answer",
+                        "sdp": "v=0\r\no=- 8158323790077533259 3 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=msid-semantic: WMS 5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\r\nm=audio 55393 RTP/SAVPF 0 8\r\nc=IN IP4 76.127.233.199\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\r\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\r\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\r\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\r\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\r\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\r\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\r\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\r\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\r\na=ice-ufrag:3TS6\r\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:audio\r\na=sendrecv\r\na=rtcp-mux\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=ssrc:3028045660 cname:gPeu5Tmv/UXRcFEy\r\na=ssrc:3028045660 msid:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv 7d4f667d-8125-412d-a6ba-b98fab647dde\r\na=ssrc:3028045660 mslabel:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\r\na=ssrc:3028045660 label:7d4f667d-8125-412d-a6ba-b98fab647dde\r\nm=video 55397 RTP/SAVPF 100\r\nc=IN IP4 76.127.233.199\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\r\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\r\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\r\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\r\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\r\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\r\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\r\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\r\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\r\na=ice-ufrag:FGXm\r\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:video\r\na=inactive\r\na=rtcp-mux\r\na=rtpmap:100 VP8/90000\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\n"
+                    },
+                    1498837035248
+                ],
+                [
+                    "setLocalDescription",
+                    "PC_0",
+                    {
+                        "type": "answer",
+                        "sdp": "v=0\r\no=- 8158323790077533259 3 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=msid-semantic: WMS 5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\r\nm=audio 55393 RTP/SAVPF 0 8\r\nc=IN IP4 76.127.233.199\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\r\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\r\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\r\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\r\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\r\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\r\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\r\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\r\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\r\na=ice-ufrag:3TS6\r\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:audio\r\na=sendrecv\r\na=rtcp-mux\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=ssrc:3028045660 cname:gPeu5Tmv/UXRcFEy\r\na=ssrc:3028045660 msid:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv 7d4f667d-8125-412d-a6ba-b98fab647dde\r\na=ssrc:3028045660 mslabel:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\r\na=ssrc:3028045660 label:7d4f667d-8125-412d-a6ba-b98fab647dde\r\nm=video 55397 RTP/SAVPF 100\r\nc=IN IP4 76.127.233.199\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\r\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\r\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\r\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\r\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\r\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\r\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\r\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\r\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\r\na=ice-ufrag:FGXm\r\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:video\r\na=inactive\r\na=rtcp-mux\r\na=rtpmap:100 VP8/90000\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\n"
+                    },
+                    1498837035249
+                ],
+                [
+                    "onnegotiationneeded",
+                    "PC_0",
+                    1498837035292
+                ],
+                [
+                    "onnegotiationneeded",
+                    "PC_0",
+                    1498837035292
+                ],
+                [
+                    "setLocalDescriptionOnSuccess",
+                    "PC_0",
+                    1498837035293
+                ],
+                [
+                    "onsignalingstatechange",
+                    "PC_0",
+                    "stable",
+                    1498837035310
+                ],
+                [
+                    "getstats",
+                    "PC_0",
+                    {
+                        "Channel-audio-1": {
+                            "remoteCertificateId": "googCertificate_0F:A4:87:DF:99:3B:91:D2:A1:4B:F8:D2:0C:88:C2:22:B6:4B:B9:19",
+                            "selectedCandidatePairId": "Conn-audio-1-0",
+                            "dtlsCipher": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                            "srtpCipher": "AES_CM_128_HMAC_SHA1_80"
+                        },
+                        "Channel-video-1": {
+                            "remoteCertificateId": "googCertificate_0F:A4:87:DF:99:3B:91:D2:A1:4B:F8:D2:0C:88:C2:22:B6:4B:B9:19",
+                            "selectedCandidatePairId": "Conn-video-1-0",
+                            "dtlsCipher": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+                            "srtpCipher": "AES_CM_128_HMAC_SHA1_80"
+                        },
+                        "ssrc_3311530168_recv": {
+                            "googDecodingCTN": "107",
+                            "googDecodingPLC": "4",
+                            "packetsReceived": "20",
+                            "googExpandRate": "1",
+                            "googPreferredJitterBufferMs": "30",
+                            "googSpeechExpandRate": "0.202698",
+                            "googDecodingPLCCNG": "66",
+                            "googCodecName": "PCMU",
+                            "googDecodingNormal": "37",
+                            "audioOutputLevel": "0",
+                            "googAccelerateRate": "0.00671387",
+                            "bytesReceived": "5040",
+                            "googCurrentDelayMs": "132",
+                            "googPreemptiveExpandRate": "0.0269775",
+                            "googJitterBufferMs": "238",
+                            "googDecodingMuted": "65"
+                        },
+                        "Conn-audio-1-0": {
+                            "responsesSent": "1",
+                            "requestsReceived": "1",
+                            "googReadable": "true",
+                            "googLocalAddress": "76.127.233.199:55393",
+                            "consentRequestsSent": "6",
+                            "googLocalCandidateType": "stun",
+                            "googWritable": "true",
+                            "requestsSent": "6",
+                            "googRemoteAddress": "76.127.233.199:20900",
+                            "googRtt": "1",
+                            "googActiveConnection": "true",
+                            "bytesReceived": "6339",
+                            "responsesReceived": "1",
+                            "remoteCandidateId": "Cand-q5NtMyw6",
+                            "localCandidateId": "Cand-E9JFmUa/",
+                            "bytesSent": "7247",
+                            "packetsSent": "42"
+                        },
+                        "Conn-audio-1-1": {
+                            "consentRequestsSent": "6",
+                            "requestsSent": "6",
+                            "googRemoteAddress": "172.23.10.91:20900",
+                            "remoteCandidateId": "Cand-KkgBAduC"
+                        },
+                        "Conn-video-1-0": {
+                            "responsesSent": "1",
+                            "requestsReceived": "1",
+                            "googReadable": "true",
+                            "googLocalAddress": "76.127.233.199:55397",
+                            "consentRequestsSent": "6",
+                            "googLocalCandidateType": "stun",
+                            "googWritable": "true",
+                            "requestsSent": "6",
+                            "googRemoteAddress": "76.127.233.199:20830",
+                            "googRtt": "5",
+                            "googActiveConnection": "true",
+                            "bytesReceived": "1099",
+                            "responsesReceived": "1",
+                            "remoteCandidateId": "Cand-5ktbTmsP",
+                            "localCandidateId": "Cand-zm6QTWaE",
+                            "bytesSent": "359",
+                            "packetsSent": "3"
+                        },
+                        "Conn-video-1-1": {
+                            "consentRequestsSent": "7",
+                            "requestsSent": "7",
+                            "googRemoteAddress": "172.23.10.91:20830",
+                            "remoteCandidateId": "Cand-1nOT02UD"
+                        },
+                        "ssrc_115063965_send": {
+                            "audioInputLevel": "3",
+                            "packetsSent": "3",
+                            "bytesSent": "516"
+                        },
+                        "googCertificate_0F:A4:87:DF:99:3B:91:D2:A1:4B:F8:D2:0C:88:C2:22:B6:4B:B9:19": {
+                            "id": "googCertificate_0F:A4:87:DF:99:3B:91:D2:A1:4B:F8:D2:0C:88:C2:22:B6:4B:B9:19",
+                            "timestamp": 1498837035930,
+                            "type": "googCertificate",
+                            "googFingerprint": "0F:A4:87:DF:99:3B:91:D2:A1:4B:F8:D2:0C:88:C2:22:B6:4B:B9:19",
+                            "googFingerprintAlgorithm": "sha-1",
+                            "googDerBase64": "MIIBujCCASOgAwIBAAIBADANBgkqhkiG9w0BAQUFADAiMQswCQYDVQQGEwJVUzETMBEGA1UEAxMKRnJlZVNXSVRDSDAgFw0xNTA5MjIyMDI1MzRaGA8yMTE1MDkwNTIwMjUzNFowIjELMAkGA1UEBhMCVVMxEzARBgNVBAMTCkZyZWVTV0lUQ0gwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ4nT0KVqK3OPGP/HcbDrAc9zGWm9JEaW99mTzSZWYF7zzrtWdfiofL1NU8UxAhMu3RIDFzn1dwiszr70rdi8Ye5Uleyfw3TAXGZsRe1cgYg56gJ+uhWxv+z19O/GwBoSD15NOTUX4Gm5lhZe/SMZ3AgXBe6E1tK3HnfMammCCEhAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEARlD65BjQaZwbWep8K1XPb9F6jtJkJa6uugUHSvqJ2WHoy6HO3GWyqYTEIvvuJOKCtS1TZL+ebdVgLQFoLLXL32Q2QNKlbaRvqOCAUr58aOZRnrrYWNXpDpxDK4QKOeoiaMEvH/X+ECa8Xd7OR21BCMUL60cYy48c+OApCYWfCdk="
+                        },
+                        "Cand-E9JFmUa/": {
+                            "id": "Cand-E9JFmUa/",
+                            "timestamp": 1498837035225,
+                            "type": "localcandidate",
+                            "portNumber": "55393",
+                            "networkType": "lan",
+                            "ipAddress": "76.127.233.199",
+                            "transport": "udp",
+                            "candidateType": "serverreflexive",
+                            "priority": "1685855999"
+                        },
+                        "Cand-zm6QTWaE": {
+                            "id": "Cand-zm6QTWaE",
+                            "timestamp": 1498837035225,
+                            "type": "localcandidate",
+                            "portNumber": "55397",
+                            "networkType": "lan",
+                            "ipAddress": "76.127.233.199",
+                            "transport": "udp",
+                            "candidateType": "serverreflexive",
+                            "priority": "1685855999"
+                        },
+                        "googTrack_7d4f667d-8125-412d-a6ba-b98fab647dde": {
+                            "id": "googTrack_7d4f667d-8125-412d-a6ba-b98fab647dde",
+                            "timestamp": 1498837035930,
+                            "type": "googTrack",
+                            "googTrackId": "7d4f667d-8125-412d-a6ba-b98fab647dde"
+                        },
+                        "ssrc_3028045660_send": {
+                            "id": "ssrc_3028045660_send",
+                            "timestamp": 1498837035930,
+                            "type": "ssrc",
+                            "audioInputLevel": "1",
+                            "transportId": "Channel-audio-1",
+                            "mediaType": "audio",
+                            "googResidualEchoLikelihood": "0",
+                            "googEchoCancellationReturnLoss": "-100",
+                            "googCodecName": "PCMU",
+                            "googResidualEchoLikelihoodRecentMax": "0",
+                            "googEchoCancellationQualityMin": "0",
+                            "googTrackId": "7d4f667d-8125-412d-a6ba-b98fab647dde",
+                            "ssrc": "3028045660",
+                            "googTypingNoiseState": "false",
+                            "googEchoCancellationReturnLossEnhancement": "-100",
+                            "packetsSent": "33",
+                            "bytesSent": "5676",
+                            "aecDivergentFilterFraction": "0"
+                        },
+                        "timestamp": "2017-06-30T15:37:15.933Z"
+                    },
+                    1498837035933
+                ],
+                [
+                    "getstats",
+                    "PC_0",
+                    {
+                        "ssrc_3311530168_recv": {
+                            "googDecodingCTN": "207",
+                            "packetsReceived": "54",
+                            "googExpandRate": "0",
+                            "googSpeechExpandRate": "0",
+                            "googDecodingNormal": "137",
+                            "audioOutputLevel": "16764",
+                            "googAccelerateRate": "0.10907",
+                            "bytesReceived": "13608",
+                            "googCurrentDelayMs": "166",
+                            "googPreemptiveExpandRate": "0",
+                            "googJitterBufferMs": "149"
+                        },
+                        "Conn-audio-1-0": {
+                            "responsesSent": "2",
+                            "requestsReceived": "2",
+                            "requestsSent": "7",
+                            "googRtt": "7",
+                            "bytesReceived": "15247",
+                            "responsesReceived": "2",
+                            "bytesSent": "16347",
+                            "packetsSent": "92"
+                        },
+                        "Conn-audio-1-1": {
+                            "consentRequestsSent": "7",
+                            "requestsSent": "7"
+                        },
+                        "Conn-video-1-0": {
+                            "responsesSent": "2",
+                            "requestsReceived": "2",
+                            "requestsSent": "7",
+                            "googRtt": "4",
+                            "responsesReceived": "2"
+                        },
+                        "Conn-video-1-1": {
+                            "consentRequestsSent": "8",
+                            "requestsSent": "8"
+                        },
+                        "ssrc_3028045660_send": {
+                            "packetsSent": "83",
+                            "bytesSent": "14276"
+                        },
+                        "timestamp": "2017-06-30T15:37:16.932Z"
+                    },
+                    1498837036932
+                ],
+                [
+                    "getstats",
+                    "PC_0",
+                    {
+                        "ssrc_3311530168_recv": {
+                            "googDecodingCTN": "307",
+                            "packetsReceived": "87",
+                            "googDecodingNormal": "237",
+                            "audioOutputLevel": "3999",
+                            "googAccelerateRate": "0.0789185",
+                            "bytesReceived": "21924",
+                            "googCurrentDelayMs": "85",
+                            "googJitterBufferMs": "63"
+                        },
+                        "Conn-audio-1-0": {
+                            "responsesSent": "3",
+                            "requestsReceived": "3",
+                            "requestsSent": "8",
+                            "googRtt": "10",
+                            "bytesReceived": "23893",
+                            "responsesReceived": "3",
+                            "bytesSent": "25447",
+                            "packetsSent": "142"
+                        },
+                        "Conn-audio-1-1": {
+                            "consentRequestsSent": "8",
+                            "requestsSent": "8"
+                        },
+                        "Conn-video-1-0": {
+                            "responsesSent": "3",
+                            "requestsReceived": "3",
+                            "requestsSent": "8",
+                            "googRtt": "3",
+                            "responsesReceived": "3",
+                            "bytesSent": "415",
+                            "packetsSent": "5"
+                        },
+                        "Conn-video-1-1": {
+                            "consentRequestsSent": "9",
+                            "requestsSent": "9"
+                        },
+                        "ssrc_3028045660_send": {
+                            "packetsSent": "133",
+                            "bytesSent": "22876"
+                        },
+                        "timestamp": "2017-06-30T15:37:17.932Z"
+                    },
+                    1498837037932
+                ]
+            ]
+        }
+    ],
+    "log": [
+        "[2017-06-30 11:36:12.834 -04:00 - app - main] Run started",
+        "[2017-06-30 11:36:12.948 -04:00 - app - main] App version: {version_number}",
+        "[2017-06-30 11:36:12.949 -04:00 - app - main] Storage version: current = 5, desired = 5",
+        "[2017-06-30 11:36:12.951 -04:00 - app - main] Enable video: true",
+        "[2017-06-30 11:36:12.951 -04:00 - app - main] Enable video hold: true",
+        "[2017-06-30 11:36:12.953 -04:00 - app - main] Use video stream forwarding: true",
+        "[2017-06-30 11:36:13.306 -04:00 - wcs - main] logMaxMessageSize: 1024",
+        "[2017-06-30 11:36:13.326 -04:00 - wcs - main] logMaxMessageSize: 1024",
+        "[2017-06-30 11:36:13.328 -04:00 - sip_stats - main] useCallStats: false",
+        "[2017-06-30 11:36:13.355 -04:00 - app - main] Calling navigator.getUserMedia",
+        "[2017-06-30 11:36:13.373 -04:00 - nativeMessage - main] Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36",
+        "[2017-06-30 11:36:13.385 -04:00 - alertController - main] serviceWorker is supported",
+        "[2017-06-30 11:36:13.412 -04:00 - wcs - main] Connect",
+        "[2017-06-30 11:36:13.420 -04:00 - wcs - main] onOpen - logging in with token",
+        "[2017-06-30 11:36:13.481 -04:00 - windowService - main] message: undefined",
+        "[2017-06-30 11:36:13.483 -04:00 - callService - main] message: undefined",
+        "[2017-06-30 11:36:13.766 -04:00 - settingsController - main] load",
+        "[2017-06-30 11:36:13.773 -04:00 - settingsController - main] Loading user details",
+        "[2017-06-30 11:36:14.266 -04:00 - app - main] Loading DetectRTC",
+        "[2017-06-30 11:36:14.269 -04:00 - app - main] Has camera: true",
+        "[2017-06-30 11:36:14.269 -04:00 - app - main] Checking sources",
+        "[2017-06-30 11:36:14.270 -04:00 - app - main] Saved speaker ID: 2e3c7dac95bddc51a89455621c74a0824fa932236def7567c5c5d06f8059ae83",
+        "[2017-06-30 11:36:14.271 -04:00 - app - main] Speaker: Speakers (VIA HD Audio) = 2e3c7dac95bddc51a89455621c74a0824fa932236def7567c5c5d06f8059ae83",
+        "[2017-06-30 11:36:14.271 -04:00 - app - main] Speaker: HD Audio HDMI out (VIA HD Audio) = 5c36d7cae11c42b40f54489b2df18146bceb64591d8a478799f6ee0dafdb1d20",
+        "[2017-06-30 11:36:14.271 -04:00 - app - main] Speaker: Headset Earphone (Logitech H820e) = 2ba1e782348c3273453e4d3504719b478346177794ea1a23de6065e154e0287b",
+        "[2017-06-30 11:36:14.272 -04:00 - app - main] Speaker: Headphone (VIA HD Audio) = 2ca2e6a6d8b877192c5ae620b50fdd548fb29e80547148c9bc9e9f3ea3795e4f",
+        "[2017-06-30 11:36:14.272 -04:00 - app - main] Speaker: Speakers (MP4 Recorder Virtual Audio Device) = b330eb27cf21869499dfc321cc24029ad4e4b099139966a7d9053a58044cbd46",
+        "[2017-06-30 11:36:14.272 -04:00 - app - main] Speaker: SPDIF Interface (TX1) (VIA HD Audio) = 1b3147e80bedd28855fdd3f50b669d2b91aaac9f8d3069ace5cf714809616aca",
+        "[2017-06-30 11:36:14.273 -04:00 - app - main] Setting speaker ID: 2e3c7dac95bddc51a89455621c74a0824fa932236def7567c5c5d06f8059ae83",
+        "[2017-06-30 11:36:14.305 -04:00 - app - main] Speaker set successfully",
+        "[2017-06-30 11:36:14.315 -04:00 - alertController - main] serviceWorker error: SecurityError: Failed to register a ServiceWorker: An SSL certificate error occurred when fetching the script.",
+        "[2017-06-30 11:36:14.573 -04:00 - wcs - main] WCAPI version: 2.1.0.24",
+        "[2017-06-30 11:36:14.574 -04:00 - wcs - main] Wave server ID: 1000075",
+        "[2017-06-30 11:36:14.574 -04:00 - wcs - main] User ID: 1307",
+        "[2017-06-30 11:36:14.574 -04:00 - wcs - main] Extension: 110",
+        "[2017-06-30 11:36:14.575 -04:00 - wcs - main] Latest version: ",
+        "[2017-06-30 11:36:14.575 -04:00 - wcs - main] VCCG version: 1.0.0.1236",
+        "[2017-06-30 11:36:14.576 -04:00 - wcs - main] Sending WCAPI message: ImSignOnRequest, requestId: 1, payload: {\"Priority\":100}",
+        "[2017-06-30 11:36:14.578 -04:00 - voicemail - main] Loading service",
+        "[2017-06-30 11:36:14.578 -04:00 - hashedDataStore - main] load: 1307-VoicemailService.voicemailData",
+        "[2017-06-30 11:36:14.597 -04:00 - wcs - main] Sending WCAPI message: MessageHeadersSubscribe, payload: {\"Hash\":-1550123117}",
+        "[2017-06-30 11:36:14.598 -04:00 - callHistory - main] Loading service",
+        "[2017-06-30 11:36:14.599 -04:00 - hashedDataStore - main] load: 1307-CallHistoryService",
+        "[2017-06-30 11:36:14.605 -04:00 - wcs - main] Sending WCAPI message: CallLogHeadersSubscribe, payload: {\"OldestDateTime\":\"2017-06-30T15:21:03.000Z\"}",
+        "[2017-06-30 11:36:14.606 -04:00 - applicationSettingsService - main] Loading service",
+        "[2017-06-30 11:36:14.607 -04:00 - hashedDataStore - main] load: 1307-ApplicationSettingsService.data",
+        "[2017-06-30 11:36:14.615 -04:00 - wcs - main] Sending VCC message: vcc/application/settings/get, payload: {\"ApplicationId\":\"VPW\"}",
+        "[2017-06-30 11:36:14.641 -04:00 - directoryCtrl - main] the directory tab starts loading....................",
+        "[2017-06-30 11:36:14.654 -04:00 - directoryCtrl - main] fetch all users....",
+        "[2017-06-30 11:36:14.727 -04:00 - app - main] Connection state: true",
+        "[2017-06-30 11:36:14.728 -04:00 - hashedDataStore - main] load: 1307-UserService.extensionList",
+        "[2017-06-30 11:36:14.730 -04:00 - hashedDataStore - main] load: 1307-UserService.publicGroupList",
+        "[2017-06-30 11:36:14.731 -04:00 - hashedDataStore - main] load: 1307-UserService.privateGroupList",
+        "[2017-06-30 11:36:14.732 -04:00 - hashedDataStore - main] load: 1307-UserService.permissionList",
+        "[2017-06-30 11:36:14.733 -04:00 - hashedDataStore - main] load: 1307-UserService.personalStatusList",
+        "[2017-06-30 11:36:14.734 -04:00 - hashedDataStore - main] load: 1307-UserService.vccUserMapData",
+        "[2017-06-30 11:36:14.736 -04:00 - userService - main] ApplicationDevice - load - Type: 6, StationId: undefined, RemoteAddress: undefined",
+        "[2017-06-30 11:36:14.739 -04:00 - wcs - main] Sending WCAPI message: UserPrimaryDeviceSubscribe, payload: {}",
+        "[2017-06-30 11:36:14.740 -04:00 - wcs - main] Sending WCAPI message: MailboxSettingsRequest, payload: {}",
+        "[2017-06-30 11:36:14.742 -04:00 - wcs - main] Sending WCAPI message: PermissionSubscribe, payload: {\"Hash\":\"ee1e43f52401ffe7af59eced9b18e837\"}",
+        "[2017-06-30 11:36:14.743 -04:00 - wcs - main] Sending WCAPI message: UserPersonalStatusListSubscribe, payload: undefined",
+        "[2017-06-30 11:36:14.744 -04:00 - userService - main] Primary softphone is not supported as user is not configured",
+        "[2017-06-30 11:36:14.745 -04:00 - userService - main] Secondary softphone is supported",
+        "[2017-06-30 11:36:14.747 -04:00 - settingsController - main] Loading user details",
+        "[2017-06-30 11:36:14.789 -04:00 - hashedDataStore - main] loadDelayed: 1307-UserService.publicContactList",
+        "[2017-06-30 11:36:14.790 -04:00 - hashedDataStore - main] loadDelayed: 1307-UserService.privateContactList",
+        "[2017-06-30 11:36:14.791 -04:00 - callService - main] Loading service",
+        "[2017-06-30 11:36:14.792 -04:00 - hashedDataStore - main] load: 1307-CallService.firstDigitData",
+        "[2017-06-30 11:36:14.793 -04:00 - wcs - main] Sending WCAPI message: ClientFirstDigitRequest, requestId: 2, payload: {\"Hash\":\"6e6405d27f264e3194fdd2acc4cd26a4\"}",
+        "[2017-06-30 11:36:14.793 -04:00 - wcs - main] Sending WCAPI message: CallNotificationSubscribe, requestId: 3, payload: {}",
+        "[2017-06-30 11:36:14.794 -04:00 - wcs - main] Sending WCAPI message: ExtensionListSubscribe, payload: {\"Hash\":-1526055582}",
+        "[2017-06-30 11:36:14.795 -04:00 - wcs - main] Sending WCAPI message: ViewpointPrivateGroupsSubscribe, payload: {\"Hash\":-2138614745}",
+        "[2017-06-30 11:36:14.796 -04:00 - wcs - main] Sending WCAPI message: ViewpointPublicGroupsSubscribe, payload: {\"Hash\":1162935610}",
+        "[2017-06-30 11:36:14.797 -04:00 - wcs - main] Sending VCC message: vcc/tenant/me, payload: {}",
+        "[2017-06-30 11:36:14.797 -04:00 - sip - main] SIP connection event: 0, reason: undefined",
+        "[2017-06-30 11:36:14.798 -04:00 - userService - main] setVideoPresence: canMakeVideoCall returned false. enableVideo: true, hasWebcam: true, initialized: false, registered: false, lastConnectionEvent: 0",
+        "[2017-06-30 11:36:14.799 -04:00 - app - main] ************************************** SIP phoneConnected: {\"type\":\"nm:phoneState\",\"connected\":false}",
+        "[2017-06-30 11:36:14.876 -04:00 - sip - main] sip.ua: configuration parameters after validation:",
+        "[2017-06-30 11:36:14.878 -04:00 - sip - main] sip.ua: � viaHost: \"qan2ajhoaj1n.invalid\"",
+        "[2017-06-30 11:36:14.879 -04:00 - sip - main] sip.ua: � uri: sip:110_1000075@vccdev.vappcenter.com",
+        "[2017-06-30 11:36:14.879 -04:00 - sip - main] sip.ua: � wsServers: [{\"ws_uri\":\"wss://localhost/wss?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjExLCJ0aWQiOjEsImRpZCI6IjE2OTYzODZjLTk3MzgtMDdhMi1jZTljLWJlYTZiMDUxZGFkNyIsInV0eXAiOjEsImV4cCI6MTQ5OTM3MzMzMCwidHlwIjoibG9naW4iLCJpYXQiOjE0OTg3Njg1MzAsImlzcyI6InZjY2F1dGgtMTIzMC1wdmt4bCJ9.UGk8vpc8U6Jh2PbH0P7nKEtCdbqyYDrzRbjQ_sX4HUD70UmcOOLLTJoFO3iGYL9GbyDcrfXfzPb36yNVKvBZGBJIAO9HSAgKJaYMgv7qqFLaA2zUMM1U814FDBQ8wI93mYNuER6jEVKq58JeL3kFGf3unhIfZCqN7bUvQEgxhVRzi_zxI0xpgjTI-1kjXtHHPiry2Ftz3ixl1my_7ZEzPgpCc39e9egPub5iGHnEjg4GXakqTZVBjP3ZGOoUPnSukjoUqZkLDCvZD1u32Q97-h4nMZLlNGiWMKa2q9CQ_nttUb5FXSeQEo3AuPJLxIIUVveouLPchM_Zl9mgH59NSw\",\"sip_uri\":\"<sip:localhost;transport=ws;lr>\",\"weight\":0,\"status\":0,\"scheme\":\"WSS\"}]",
+        "[2017-06-30 11:36:14.880 -04:00 - sip - main] sip.ua: � password: NOT SHOWN",
+        "[2017-06-30 11:36:14.880 -04:00 - sip - main] sip.ua: � registerExpires: 240",
+        "[2017-06-30 11:36:14.881 -04:00 - sip - main] sip.ua: � register: true",
+        "[2017-06-30 11:36:14.882 -04:00 - sip - main] sip.ua: � registrarServer: sip:vccdev.vappcenter.com",
+        "[2017-06-30 11:36:14.882 -04:00 - sip - main] sip.ua: � wsServerMaxReconnection: 20",
+        "[2017-06-30 11:36:14.883 -04:00 - sip - main] sip.ua: � wsServerReconnectionTimeout: 10",
+        "[2017-06-30 11:36:14.883 -04:00 - sip - main] sip.ua: � connectionRecoveryMinInterval: 2",
+        "[2017-06-30 11:36:14.884 -04:00 - sip - main] sip.ua: � connectionRecoveryMaxInterval: 30",
+        "[2017-06-30 11:36:14.884 -04:00 - sip - main] sip.ua: � keepAliveInterval: 0",
+        "[2017-06-30 11:36:14.885 -04:00 - sip - main] sip.ua: � extraSupported: []",
+        "[2017-06-30 11:36:14.886 -04:00 - sip - main] sip.ua: � usePreloadedRoute: false",
+        "[2017-06-30 11:36:14.886 -04:00 - sip - main] sip.ua: � userAgentString: \"SIP.js/0.7.2\"",
+        "[2017-06-30 11:36:14.888 -04:00 - sip - main] sip.ua: � iceCheckingTimeout: 500",
+        "[2017-06-30 11:36:14.888 -04:00 - sip - main] sip.ua: � noAnswerTimeout: 60000",
+        "[2017-06-30 11:36:14.888 -04:00 - sip - main] sip.ua: � stunServers: [\"stun:stun4.l.google.com:19302\"]",
+        "[2017-06-30 11:36:14.889 -04:00 - sip - main] sip.ua: � turnServers: []",
+        "[2017-06-30 11:36:14.890 -04:00 - sip - main] sip.ua: � traceSip: true",
+        "[2017-06-30 11:36:14.890 -04:00 - sip - main] sip.ua: � hackViaTcp: false",
+        "[2017-06-30 11:36:14.892 -04:00 - sip - main] sip.ua: � hackIpInContact: false",
+        "[2017-06-30 11:36:14.894 -04:00 - sip - main] sip.ua: � hackWssInTransport: false",
+        "[2017-06-30 11:36:14.894 -04:00 - sip - main] sip.ua: � hackAllowUnregisteredOptionTags: false",
+        "[2017-06-30 11:36:14.895 -04:00 - sip - main] sip.ua: � contactTransport: \"ws\"",
+        "[2017-06-30 11:36:14.896 -04:00 - sip - main] sip.ua: � forceRport: false",
+        "[2017-06-30 11:36:14.897 -04:00 - sip - main] sip.ua: � autostart: true",
+        "[2017-06-30 11:36:14.897 -04:00 - sip - main] sip.ua: � rel100: \"none\"",
+        "[2017-06-30 11:36:14.899 -04:00 - sip - main] sip.ua: � replaces: \"none\"",
+        "[2017-06-30 11:36:14.899 -04:00 - sip - main] sip.ua: � mediaHandlerFactory: function promisifiedFactory() {\r\n          var mediaHandler = mediaHandlerFactory.apply(this, arguments);\r\n\r\n          function patchMethod (methodName) {\r\n            var method = mediaHandler[methodName];\r\n            if (method.length > 1) {\r\n              var callbacksFirst = methodName === 'getDescription';\r\n              mediaHandler[methodName] = SIP.Utils.promisify(mediaHandler, methodName, callbacksFirst);\r\n            }\r\n          }\r\n\r\n          patchMethod('getDescription');\r\n          patchMethod('setDescription');\r\n\r\n          return mediaHandler;\r\n        }",
+        "[2017-06-30 11:36:14.900 -04:00 - sip - main] sip.ua: � authenticationFactory: undefined",
+        "[2017-06-30 11:36:14.900 -04:00 - sip - main] sip.ua: � authorizationUser: \"110_1000075\"",
+        "[2017-06-30 11:36:14.901 -04:00 - sip - main] sip.ua: � displayName: \"110_1000075\"",
+        "[2017-06-30 11:36:14.902 -04:00 - sip - main] sip.ua: � instanceId: \"f2ccc83f-a21c-4d1b-8722-1fa8f825cfc1\"",
+        "[2017-06-30 11:36:14.902 -04:00 - sip - main] sip.ua: � sipjsId: \"0qjfo\"",
+        "[2017-06-30 11:36:14.903 -04:00 - sip - main] sip.ua: � hostportParams: \"vccdev.vappcenter.com\"",
+        "[2017-06-30 11:36:14.904 -04:00 - sip - main] sip.ua: � media: undefined",
+        "[2017-06-30 11:36:14.915 -04:00 - sip - main] sip.ua: user requested startup...",
+        "[2017-06-30 11:36:14.917 -04:00 - sip - main] sip.transport: connecting to WebSocket wss://localhost/wss?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjExLCJ0aWQiOjEsImRpZCI6IjE2OTYzODZjLTk3MzgtMDdhMi1jZTljLWJlYTZiMDUxZGFkNyIsInV0eXAiOjEsImV4cCI6MTQ5OTM3MzMzMCwidHlwIjoibG9naW4iLCJpYXQiOjE0OTg3Njg1MzAsImlzcyI6InZjY2F1dGgtMTIzMC1wdmt4bCJ9.UGk8vpc8U6Jh2PbH0P7nKEtCdbqyYDrzRbjQ_sX4HUD70UmcOOLLTJoFO3iGYL9GbyDcrfXfzPb36yNVKvBZGBJIAO9HSAgKJaYMgv7qqFLaA2zUMM1U814FDBQ8wI93mYNuER6jEVKq58JeL3kFGf3unhIfZCqN7bUvQEgxhVRzi_zxI0xpgjTI-1kjXtHHPiry2Ftz3ixl1my_7ZEzPgpCc39e9egPub5iGHnEjg4GXakqTZVBjP3ZGOoUPnSukjoUqZkLDCvZD1u32Q97-h4nMZLlNGiWMKa2q9CQ_nttUb5FXSeQEo3AuPJLxIIUVveouLPchM_Zl9mgH59NSw",
+        "[2017-06-30 11:36:14.918 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/connect, payload: {}",
+        "[2017-06-30 11:36:14.920 -04:00 - userService - main] setVideoPresence: canMakeVideoCall returned false. enableVideo: true, hasWebcam: true, initialized: true, registered: true, lastConnectionEvent: 0",
+        "[2017-06-30 11:36:15.170 -04:00 - windowService - main] message: undefined",
+        "[2017-06-30 11:36:15.171 -04:00 - callService - main] message: undefined",
+        "[2017-06-30 11:36:15.195 -04:00 - wcs - main] Sending WCAPI message: ContactsPublicSubscribe, payload: {\"Hash\":-656928582}",
+        "[2017-06-30 11:36:15.196 -04:00 - hashedDataStore - main] save: 1307-UserService.publicContactList",
+        "[2017-06-30 11:36:15.216 -04:00 - wcs - main] Sending WCAPI message: ContactsPrivateSubscribe, payload: {\"Hash\":312837472}",
+        "[2017-06-30 11:36:15.216 -04:00 - hashedDataStore - main] save: 1307-UserService.privateContactList",
+        "[2017-06-30 11:36:15.306 -04:00 - wcs - main] WCAPI message received: ImSignOnResponse, requestId: 1, data: {\"Result\":0}",
+        "[2017-06-30 11:36:15.307 -04:00 - wcs - main] Sending WCAPI message: ImConversationSummaryRequest, payload: {\"BeforeTime\":null,\"MaxCount\":30,\"BodyLengthMax\":70}",
+        "[2017-06-30 11:36:15.308 -04:00 - hashedDataStore - main] save: 1307-ApplicationSettingsService.data",
+        "[2017-06-30 11:36:15.386 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.386 -04:00 - wcs - main] WCAPI message received: CallLogHeadersResponse, requestId: 0, data: {\"Headers\":[{\"Id\":9364,\"Dir\":1,\"StartT\":\"\\/Date(1498836063000)\\/\",\"EndT\":\"\\/Date(1498836068000)\\/\",\"CIdName\":\"\",\"CIdNum\":\"111\",\"PrtyCnt\":2,\"AssocId\":33,\"AssocFN\":\"\",\"AssocLN\":\"\",\"CallbackAddr\":null,\"ContactDefAddr\":\"\",\"ToFullName\":\"Conference Bridge\",\"FromFullName\":\"Chris Kaczor\",\"Result\":1,\"DialString\":\"111\",\"HasNotes\":false,\"ToId\":1314,\"FromId\":1307,\"HadVideo\":false,\"PbeList\":[1314]}]}",
+        "[2017-06-30 11:36:15.388 -04:00 - hashedDataStore - main] save: 1307-CallHistoryService",
+        "[2017-06-30 11:36:15.490 -04:00 - wcs - main] WCAPI message received: UserPrimaryDeviceUpdate, requestId: 0, data: {\"VPDSoftphoneAllowed\":true,\"VPMSoftphoneIsPrimary\":false,\"VPWSoftphoneAllowed\":true,\"VPWSoftphoneIsPrimary\":false,\"PrimaryPhone\":1,\"PrimaryPhoneAddr\":null,\"PrimaryPhoneEx\":1,\"PrimaryPhoneAddrEx\":null}",
+        "[2017-06-30 11:36:15.493 -04:00 - wcs - main] Sending VCC message: vcc/wave-gateway/wave/pbeid-userid/list, payload: {\"WaveServerId\":1000075,\"Hash\":\"4cb7e4f00e45e4491ed078354c9b5f7a\"}",
+        "[2017-06-30 11:36:15.494 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.495 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.495 -04:00 - wcs - main] WCAPI message received: MailboxSettingsResponse, requestId: 0, data: {\"CurrentMaxLength\":180,\"MaxLength\":300,\"PlayOrder\":4,\"MailboxSize\":1200,\"CurrentSize\":952,\"EmptyTrashOnExit\":false,\"RemoveOld\":2,\"RemoveOldDays\":3,\"EmailNotification\":0,\"EmailAddress\":\"foo@bar.com\",\"AttachVM\":0,\"CallNotification\":0,\"CallNotificationNumber\":\"113\"}",
+        "[2017-06-30 11:36:15.496 -04:00 - hashedDataStore - main] save: undefined-UserService.mailboxSettings",
+        "[2017-06-30 11:36:15.497 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.498 -04:00 - wcs - main] WCAPI message received: PersonalStatusList, requestId: 0, data: {\"PSList\":[{\"PSId\":1165,\"Icon\":2,\"Name\":\"*Available\"},{\"PSId\":1166,\"Icon\":3,\"Name\":\"*Do Not Disturb\"},{\"PSId\":1167,\"Icon\":4,\"Name\":\"*In A Meeting\"},{\"PSId\":1168,\"Icon\":5,\"Name\":\"*Out Of The Office\"},{\"PSId\":1169,\"Icon\":6,\"Name\":\"*Vacation\"},{\"PSId\":1175,\"Icon\":7,\"Name\":\"*Available (ACD Only)\"},{\"PSId\":1176,\"Icon\":8,\"Name\":\"*Available (Non-ACD)\"},{\"PSId\":1177,\"Icon\":9,\"Name\":\"*Training\"},{\"PSId\":1196,\"Icon\":10,\"Name\":\"Visiting Llanfairpwllgwyngyll for the weather\"}]}",
+        "[2017-06-30 11:36:15.520 -04:00 - hashedDataStore - main] save: 1307-UserService.personalStatusList",
+        "[2017-06-30 11:36:15.522 -04:00 - sip - main] sip.transport: WebSocket wss://localhost/wss?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjExLCJ0aWQiOjEsImRpZCI6IjE2OTYzODZjLTk3MzgtMDdhMi1jZTljLWJlYTZiMDUxZGFkNyIsInV0eXAiOjEsImV4cCI6MTQ5OTM3MzMzMCwidHlwIjoibG9naW4iLCJpYXQiOjE0OTg3Njg1MzAsImlzcyI6InZjY2F1dGgtMTIzMC1wdmt4bCJ9.UGk8vpc8U6Jh2PbH0P7nKEtCdbqyYDrzRbjQ_sX4HUD70UmcOOLLTJoFO3iGYL9GbyDcrfXfzPb36yNVKvBZGBJIAO9HSAgKJaYMgv7qqFLaA2zUMM1U814FDBQ8wI93mYNuER6jEVKq58JeL3kFGf3unhIfZCqN7bUvQEgxhVRzi_zxI0xpgjTI-1kjXtHHPiry2Ftz3ixl1my_7ZEzPgpCc39e9egPub5iGHnEjg4GXakqTZVBjP3ZGOoUPnSukjoUqZkLDCvZD1u32Q97-h4nMZLlNGiWMKa2q9CQ_nttUb5FXSeQEo3AuPJLxIIUVveouLPchM_Zl9mgH59NSw connected",
+        "[2017-06-30 11:36:15.523 -04:00 - sip - main] sip.ua: connection state set to undefined",
+        "[2017-06-30 11:36:15.524 -04:00 - sip - main] WebSocket connected",
+        "[2017-06-30 11:36:15.524 -04:00 - sip - main] SIP connection event: 0, reason: undefined",
+        "[2017-06-30 11:36:15.525 -04:00 - userService - main] setVideoPresence: canMakeVideoCall returned false. enableVideo: true, hasWebcam: true, initialized: true, registered: true, lastConnectionEvent: 0",
+        "[2017-06-30 11:36:15.525 -04:00 - app - main] ************************************** SIP phoneConnected: {\"type\":\"nm:phoneState\",\"connected\":false}",
+        "[2017-06-30 11:36:15.534 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nREGISTER sip:vccdev.vappcenter.com SIP/2.0\r\nVia: SIP/2.0/WSS qan2ajhoaj1n.invalid;branch=z9hG4bK4147842\r\nMax-Forwards: 70\r\nTo: <sip:110_1000075@vccdev.vappcenter.com>\r\nFrom: \"110_1000075\" <sip:110_1000075@vccdev.vappcenter.com>;tag=sbebfplj80\r\nCall-ID: rqskdle4rldv50rcd7fsnv\r\nCSeq: 81 REGISTER\r\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;reg-id=1;+sip.instance=\"<urn:uuid:f2ccc83f-a21c-4d1b-8722-1fa8f825cfc1>\";expires=240\r\nAllow: ACK,CANCEL,BYE,OPTIONS,INFO,NOTIFY,INVITE\r\nSupported: path, gruu, outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:36:15.535 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"REGISTER sip:vccdev.vappcenter.com SIP/2.0\\r\\nVia: SIP/2.0/WSS qan2ajhoaj1n.invalid;branch=z9hG4bK4147842\\r\\nMax-Forwards: 70\\r\\nTo: <sip:110_1000075@vccdev.vappcenter.com>\\r\\nFrom: \\\"110_1000075\\\" <sip:110_1000075@vccdev.vappcenter.com>;tag=sbebfplj80\\r\\nCall-ID: rqskdle4rldv50rcd7fsnv\\r\\nCSeq: 81 REGISTER\\r\\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;reg-id=1;+sip.instance=\\\"<urn:uuid:f2ccc83f-a21c-4d1b-8722-1fa8f825cfc1>\\\";expires=240\\r\\nAllow: ACK,CANCEL,BYE,OPTIONS,INFO,NOTIFY,INVITE\\r\\nSupported: path, gruu, outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Length: 0\\r\\n\\r\\n\"",
+        "[2017-06-30 11:36:15.536 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.537 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 2, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.537 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 3, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.543 -04:00 - windowService - main] message: undefined",
+        "[2017-06-30 11:36:15.543 -04:00 - callService - main] message: undefined",
+        "[2017-06-30 11:36:15.545 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.561 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.613 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.625 -04:00 - wcs - main] extensionAvailabilitySubscribe: [1003,1083,1096,1307,1314,1440,16610]",
+        "[2017-06-30 11:36:15.626 -04:00 - wcs - main] Sending WCAPI message: ExtensionAvailabilitySubscribe, payload: {\"PBEIds\":[1003,1083,1096,1307,1314,1440,16610]}",
+        "[2017-06-30 11:36:15.678 -04:00 - sip - main] sip.transport: received WebSocket text message:\n\nSIP/2.0 401 Unauthorized\r\nVia: SIP/2.0/WSS qan2ajhoaj1n.invalid;branch=z9hG4bK4147842;received=172.23.10.91;rport=40678\r\nFrom: \"110_1000075\" <sip:110_1000075@vccdev.vappcenter.com>;tag=sbebfplj80\r\nTo: <sip:110_1000075@vccdev.vappcenter.com>;tag=F86aDUr53Xa1H\r\nCall-ID: rqskdle4rldv50rcd7fsnv\r\nCSeq: 81 REGISTER\r\nUser-Agent: FreeSWITCH-mod_sofia/1.6.14+git~20170508T175959Z~1f8c819c69~64bit\r\nAllow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, INFO, UPDATE, REGISTER, REFER, NOTIFY\r\nSupported: timer, path, replaces\r\nWWW-Authenticate: Digest realm=\"vccdev.vappcenter.com\", nonce=\"7380bebb-9ca0-4514-ad78-76d6674dd060\", algorithm=MD5, qop=\"auth\"\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:36:15.703 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nREGISTER sip:vccdev.vappcenter.com SIP/2.0\r\nVia: SIP/2.0/WSS qan2ajhoaj1n.invalid;branch=z9hG4bK1052106\r\nMax-Forwards: 70\r\nTo: <sip:110_1000075@vccdev.vappcenter.com>\r\nFrom: \"110_1000075\" <sip:110_1000075@vccdev.vappcenter.com>;tag=sbebfplj80\r\nCall-ID: rqskdle4rldv50rcd7fsnv\r\nCSeq: 82 REGISTER\r\nAuthorization: Digest algorithm=MD5, username=\"110_1000075\", realm=\"vccdev.vappcenter.com\", nonce=\"7380bebb-9ca0-4514-ad78-76d6674dd060\", uri=\"sip:vccdev.vappcenter.com\", response=\"5e57ba53f0392def99441ead8d2faeca\", qop=auth, cnonce=\"dg4rrvg3cdh9\", nc=00000001\r\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;reg-id=1;+sip.instance=\"<urn:uuid:f2ccc83f-a21c-4d1b-8722-1fa8f825cfc1>\";expires=240\r\nAllow: ACK,CANCEL,BYE,OPTIONS,INFO,NOTIFY,INVITE\r\nSupported: path, gruu, outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:36:15.704 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"REGISTER sip:vccdev.vappcenter.com SIP/2.0\\r\\nVia: SIP/2.0/WSS qan2ajhoaj1n.invalid;branch=z9hG4bK1052106\\r\\nMax-Forwards: 70\\r\\nTo: <sip:110_1000075@vccdev.vappcenter.com>\\r\\nFrom: \\\"110_1000075\\\" <sip:110_1000075@vccdev.vappcenter.com>;tag=sbebfplj80\\r\\nCall-ID: rqskdle4rldv50rcd7fsnv\\r\\nCSeq: 82 REGISTER\\r\\nAuthorization: Digest algorithm=MD5, username=\\\"110_1000075\\\", realm=\\\"vccdev.vappcenter.com\\\", nonce=\\\"7380bebb-9ca0-4514-ad78-76d6674dd060\\\", uri=\\\"sip:vccdev.vappcenter.com\\\", response=\\\"5e57ba53f0392def99441ead8d2faeca\\\", qop=auth, cnonce=\\\"dg4rrvg3cdh9\\\", nc=00000001\\r\\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;reg-id=1;+sip.instance=\\\"<urn:uuid:f2ccc83f-a21c-4d1b-8722-1fa8f825cfc1>\\\";expires=240\\r\\nAllow: ACK,CANCEL,BYE,OPTIONS,INFO,NOTIFY,INVITE\\r\\nSupported: path, gruu, outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Length: 0\\r\\n\\r\\n\"",
+        "[2017-06-30 11:36:15.718 -04:00 - wcs - main] WCAPI message received: ImConversationSummaryResponse, requestId: 0, data: {\"Hash\":\"702a6014f39143586a34e0f3e4bb72cb\",\"Conversations\":[{\"OtherPbeIds\":[1309],\"RoomId\":null,\"Body\":\"rwerwere\",\"FromPbeId\":1309,\"SentDate\":\"\\/Date(1497890001525)\\/\",\"Count\":1307},{\"OtherPbeIds\":[1366],\"RoomId\":null,\"Body\":\"test \\\\\",\"FromPbeId\":1307,\"SentDate\":\"\\/Date(1488822689841)\\/\",\"Count\":133},{\"OtherPbeIds\":[1309],\"RoomId\":\"usertest120-99385ad6-759d-40c1-9512-50f5ae1f2c8b@conference.172.23.10.205\",\"Body\":\"fdsfsdfsdfsd\",\"FromPbeId\":1309,\"SentDate\":\"\\/Date(1467307260920)\\/\",\"Count\":9},{\"OtherPbeIds\":[1309],\"RoomId\":\"kaczorchris110-f83fcd82-9f0d-4c82-ba8e-ab2a774f328f@conference.172.23.10.205\",\"Body\":\"treterter\",\"FromPbeId\":1309,\"SentDate\":\"\\/Date(1467307209920)\\/\",\"Count\":2},{\"OtherPbeIds\":[1309],\"RoomId\":\"usertest120-497ebdc1-2b33-4418-83f9-9275ab8cb5aa@conference.172.23.10.205\",\"Body\":\"rewrwerwe\",\"FromPbeId\":1309,\"SentDate\":\"\\/Date(1467307192139)\\/\",\"Count\":2},{\"OtherPbeIds\":[1309],\"RoomId\":\"kaczorchris110-c2a1e839-9ff6-4176-a327-f56892c8725b@conference.172.23.10.205\",\"Body\":\"rewrwerw\",\"FromPbeId\":130 < snip > ",
+        "[2017-06-30 11:36:15.728 -04:00 - wcs - main] Sending VCC message: vcc/profile/list, payload: {\"UserIds\":[]}",
+        "[2017-06-30 11:36:15.780 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:36:15.795 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:36:15.822 -04:00 - sip - main] sip.transport: received WebSocket text message:\n\nSIP/2.0 200 OK\r\nVia: SIP/2.0/WSS qan2ajhoaj1n.invalid;branch=z9hG4bK1052106;received=172.23.10.91;rport=40678\r\nFrom: \"110_1000075\" <sip:110_1000075@vccdev.vappcenter.com>;tag=sbebfplj80\r\nTo: <sip:110_1000075@vccdev.vappcenter.com>;tag=gH03ep98060KD\r\nCall-ID: rqskdle4rldv50rcd7fsnv\r\nCSeq: 82 REGISTER\r\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;expires=240\r\nDate: Fri, 30 Jun 2017 15:36:16 GMT\r\nUser-Agent: FreeSWITCH-mod_sofia/1.6.14+git~20170508T175959Z~1f8c819c69~64bit\r\nAllow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, INFO, UPDATE, REGISTER, REFER, NOTIFY\r\nSupported: timer, path, replaces\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:36:15.827 -04:00 - sip - main] sip.registercontext: reregister timeout=237000, register timeout=240000",
+        "[2017-06-30 11:36:15.827 -04:00 - sip - main] User registered",
+        "[2017-06-30 11:36:15.828 -04:00 - sip - main] SIP connection event: 1, reason: undefined",
+        "[2017-06-30 11:36:15.829 -04:00 - wcs - main] Sending VCC message: vcc/profile/update, payload: {\"Presence\":1}",
+        "[2017-06-30 11:36:15.829 -04:00 - app - main] ************************************** SIP phoneConnected: {\"type\":\"nm:phoneState\",\"connected\":true}",
+        "[2017-06-30 11:36:15.839 -04:00 - windowService - main] message: undefined",
+        "[2017-06-30 11:36:15.840 -04:00 - callService - main] message: undefined",
+        "[2017-06-30 11:36:15.876 -04:00 - wcs - main] WCAPI message received: ExtensionAvailabilityUpdates, requestId: 0, data: {\"AvailUpdates\":[{\"Id\":1003,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1},{\"Id\":1083,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1140,\"IMState\":-1},{\"Id\":1096,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1},{\"Id\":1307,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1165,\"IMState\":2},{\"Id\":1314,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1},{\"Id\":1440,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1212,\"IMState\":0},{\"Id\":16610,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1}]}",
+        "[2017-06-30 11:36:15.877 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:36:16.053 -04:00 - userService - main] Primary softphone is not supported as user is not configured",
+        "[2017-06-30 11:36:16.053 -04:00 - userService - main] Secondary softphone is supported",
+        "[2017-06-30 11:36:17.201 -04:00 - userService - main] Debug info: enableVideo: true, using soft phone: true, has web cam: true, Presence: 1",
+        "[2017-06-30 11:36:21.465 -04:00 - wcs - main] Sending VCC message: vcc/tenant/me, payload: {}",
+        "[2017-06-30 11:36:31.503 -04:00 - wcs - main] Posting upload data (length: 30569) to https://www.googleapis.com/upload/storage/v1/b/vertical-cloud-connect-private-assets/o?uploadType=resumable&upload_id=AEnB2Uqf0ghOqr8OP0OqfawkHAbt_8FUVPPyPPgAEpgXAWQvrSuykWzxmWIBhsu0mfF4vubL0_KxdGxaT4SyCMS7FlbqAtT-gQ",
+        "[2017-06-30 11:37:07.304 -04:00 - userService - main] Primary softphone is not supported as user is not configured",
+        "[2017-06-30 11:37:07.304 -04:00 - userService - main] Secondary softphone is supported",
+        "[2017-06-30 11:37:07.315 -04:00 - userService - main] Primary softphone is not supported as user is not configured",
+        "[2017-06-30 11:37:07.315 -04:00 - userService - main] Secondary softphone is supported",
+        "[2017-06-30 11:37:11.548 -04:00 - callService - main] makeCallParams for object: {\"UseRules\":true,\"Addr\":\"111\",\"AddrType\":6,\"AccessCode\":\"\"}",
+        "[2017-06-30 11:37:11.552 -04:00 - wcs - main] Sending WCAPI message: CallMakeFromExternalPhone, requestId: 4, payload: {\"UseRules\":true,\"Addr\":\"111\",\"AddrType\":6,\"AccessCode\":\"\",\"MediaType\":0,\"DeviceId\":1441}",
+        "[2017-06-30 11:37:11.808 -04:00 - wcs - main] WCAPI message received: ExtensionAvailabilityUpdates, requestId: 0, data: {\"AvailUpdates\":[{\"Id\":1307,\"AVState\":1,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1165,\"IMState\":2}]}",
+        "[2017-06-30 11:37:11.809 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:11.856 -04:00 - wcs - main] WCAPI message received: CallMakeResponse, requestId: 4, data: {\"hCall\":84,\"hCallerParty\":181}",
+        "[2017-06-30 11:37:11.856 -04:00 - callService - main] callService.makeCall ResponseData {\"hCall\":84,\"hCallerParty\":181}",
+        "[2017-06-30 11:37:11.857 -04:00 - callService - main] callService.makeCall RequestItem {\"requestResult\":1,\"responseData\":{\"hCall\":84,\"hCallerParty\":181},\"timerId\":68,\"timeoutThreshold\":5000,\"requestMsgType\":1046,\"requestContext\":null,\"responseMsgType\":2025}",
+        "[2017-06-30 11:37:11.857 -04:00 - callService - main] pendingCallLink: setWaveId: 84",
+        "[2017-06-30 11:37:11.896 -04:00 - sip - main] sip.transport: received WebSocket text message:\n\nINVITE sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws;intercom=true SIP/2.0\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK55U4y5mDQr4vF\r\nRoute: <sip:h5puo6uu@172.23.10.91:40678>;transport=wss\r\nMax-Forwards: 69\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082452 INVITE\r\nContact: <sip:mod_sofia@76.127.233.199:5060>\r\nCall-Info: <sip:172.23.10.91>;answer-after=0\r\nUser-Agent: FreeSWITCH-mod_sofia/1.6.14+git~20170508T175959Z~1f8c819c69~64bit\r\nAllow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, INFO, UPDATE, REGISTER, REFER, NOTIFY\r\nSupported: timer, path, replaces\r\nAllow-Events: talk, hold, conference, refer\r\nContent-Type: application/sdp\r\nContent-Disposition: session\r\nContent-Length: 1994\r\nX-FS-Support: update_display,send_info\r\nRemote-Party-ID: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;party=calling;screen=yes;privacy=off\r\n\r\nv=0\r\no=FreeSWITCH 1498816132 1498816133 IN IP4 172.23.10.91\r\ns=FreeSWITCH\r\nc=IN IP4 172.23.10.91\r\nt=0 0\r\na=msid-semantic: WMS ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\nm=audio 20900 RTP/SAVPF 0 8\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=fingerprint:sha-256 09:63:A6:CD:80:79:EE:E4:D7:D4:48:00:89:F9:19:D0:D6:FC:3E:9B:AC:F2:51:E0:06:A9:DE:8C:7A:92:F3:9C\r\na=setup:actpass\r\na=rtcp-mux\r\na=rtcp:20900 IN IP4 172.23.10.91\r\na=ssrc:3311530168 cname:B4jsRUf1SD3LHexj\r\na=ssrc:3311530168 msid:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN a0\r\na=ssrc:3311530168 mslabel:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\na=ssrc:3311530168 label:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbNa0\r\na=ice-ufrag:fyysdozFOKpobq2D\r\na=ice-pwd:lbV2V0UEuNf1SDbX1zf4OEzt\r\na=candidate:9227753840 1 udp 659136 172.23.10.91 20900 typ host generation 0\r\na=candidate:8513607212 1 udp 659136 76.127.233.199 20900 typ host generation 0\r\na=candidate:9227753840 2 udp 659136 172.23.10.91 20900 typ host generation 0\r\na=candidate:8513607212 2 udp 659136 76.127.233.199 20900 typ host generation 0\r\na=ptime:20\r\nm=video 20830 RTP/SAVPF 100\r\nb=AS:1024\r\na=rtpmap:100 VP8/90000\r\na=fingerprint:sha-256 09:63:A6:CD:80:79:EE:E4:D7:D4:48:00:89:F9:19:D0:D6:FC:3E:9B:AC:F2:51:E0:06:A9:DE:8C:7A:92:F3:9C\r\na=setup:actpass\r\na=rtcp-mux\r\na=rtcp:20830 IN IP4 172.23.10.91\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 ccm tmmbr\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=ssrc:2562132540 cname:B4jsRUf1SD3LHexj\r\na=ssrc:2562132540 msid:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN v0\r\na=ssrc:2562132540 mslabel:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\na=ssrc:2562132540 label:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbNv0\r\na=ice-ufrag:rr0CWO5okJr5Gwmf\r\na=ice-pwd:BrA5szjR2Wd0nNgE476RL26W\r\na=candidate:9491188261 1 udp 659136 172.23.10.91 20830 typ host generation 0\r\na=candidate:0868827939 1 udp 659136 76.127.233.199 20830 typ host generation 0\r\na=candidate:9491188261 2 udp 659135 172.23.10.91 20830 typ host generation 0\r\na=candidate:0868827939 2 udp 659135 76.127.233.199 20830 typ host generation 0\r\na=end-of-candidates\r\n\n",
+        "[2017-06-30 11:37:11.917 -04:00 - sip - main] onRequestReceived",
+        "[2017-06-30 11:37:11.918 -04:00 - sip - main] SIP call event: pre_invite",
+        "[2017-06-30 11:37:11.920 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nSIP/2.0 100 Trying\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK55U4y5mDQr4vF\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082452 INVITE\r\nSupported: outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:11.921 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"SIP/2.0 100 Trying\\r\\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK55U4y5mDQr4vF\\r\\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\\r\\nFrom: \\\"v000019\\\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\\r\\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\\r\\nCSeq: 109082452 INVITE\\r\\nSupported: outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Length: 0\\r\\n\\r\\n\"",
+        "[2017-06-30 11:37:11.923 -04:00 - sip - main] sip.dialog: new UAS dialog created with status EARLY",
+        "[2017-06-30 11:37:11.923 -04:00 - sip - main] mediaFactory: Returning new MediaHandler",
+        "[2017-06-30 11:37:11.929 -04:00 - sip - main] peerConnection created, pcState=stable/new/new",
+        "[2017-06-30 11:37:11.930 -04:00 - sip - main] onSessionCreated",
+        "[2017-06-30 11:37:11.933 -04:00 - sip - main] SIP call event: session_created",
+        "[2017-06-30 11:37:11.934 -04:00 - sip - main] addCall: callSessions=",
+        "[2017-06-30 11:37:11.939 -04:00 - callService - main] pendingCallLink: Linked wave call 84 with sip call d4258303-d84c-1235-3da9-000c2917f76eHtSvgHtcyFQ6r",
+        "[2017-06-30 11:37:11.940 -04:00 - sip - main] newCallSetup: session=d4258303-d84c-1235-3da9-000c2917f76eHtSvgHtcyFQ6r, waveCall not found. hCall=84",
+        "[2017-06-30 11:37:11.942 -04:00 - sip - main] session_created: new call setup",
+        "[2017-06-30 11:37:11.944 -04:00 - sip - main] onSetDescription: type=",
+        "[2017-06-30 11:37:11.945 -04:00 - sip - main] onSetDescription: pcState=peerConnection.signalingstate=stable, iceGatheringState=new, iceConnectionState=new",
+        "[2017-06-30 11:37:11.945 -04:00 - sip - main] onSetDescription: proposed",
+        "[2017-06-30 11:37:11.946 -04:00 - sip - main] onSetDescription: current",
+        "[2017-06-30 11:37:11.947 -04:00 - sip - main] onSetDescription: currentVideo=false, proposedVideo=true",
+        "[2017-06-30 11:37:11.947 -04:00 - sip - main] SIP call event: video_escalate",
+        "[2017-06-30 11:37:11.949 -04:00 - sip - main] onVideoEscalate: hCall= 84, session=d4258303-d84c-1235-3da9-000c2917f76eHtSvgHtcyFQ6r, myPartyStatus=23, isVideoCall=false, isHeld=no call, isVideoEscalator=no call, isWithinInviteWindow=no call",
+        "[2017-06-30 11:37:11.949 -04:00 - sip - main] onVideoEscalate: Saved initial cseq to local storage as {\"hCall\":84,\"cseq\":109082452}",
+        "[2017-06-30 11:37:11.950 -04:00 - sip - main] markVideoInactive: inactive setting not found, inserting",
+        "[2017-06-30 11:37:11.951 -04:00 - sip - main] acceptSetDescription: Resolving setDescriptionPromise",
+        "[2017-06-30 11:37:11.951 -04:00 - sip - main] setDescriptionPromiseResolve: pcState=stable/new/new",
+        "[2017-06-30 11:37:11.959 -04:00 - wcs - main] WCAPI message received: CallNotification, requestId: 0, data: {\"ServerTime\":\"\\/Date(1498837031607)\\/\",\"hCall\":84,\"State\":2,\"Orbit\":0,\"Features\":184549376,\"MyParty\":{\"hParty\":181,\"Direction\":1,\"Status\":23,\"Role\":3,\"StartT\":\"\\/Date(1498837031000)\\/\",\"Features\":8388609,\"Notes\":null,\"PartyPbeId\":1307,\"PartyPbeClass\":1301,\"LocationPbeId\":1307,\"LocationPbeIdClass\":1301,\"OwnerDeviceId\":1441,\"IsAccepted\":true,\"FirstName\":\"Chris\",\"PrimaryName\":\"Kaczor\",\"MediaType\":0,\"CustomData\":null},\"OtherParties\":[{\"CallerIdNumber\":\"111\",\"CallerIdName\":\"\",\"hParty\":182,\"Direction\":0,\"Status\":0,\"Role\":3,\"StartT\":\"\\/Date(1498837031000)\\/\",\"Features\":1,\"Notes\":null,\"PartyPbeId\":33,\"PartyPbeClass\":0,\"LocationPbeId\":0,\"LocationPbeIdClass\":0,\"OwnerDeviceId\":1441,\"IsAccepted\":false,\"FirstName\":null,\"PrimaryName\":null,\"MediaType\":0,\"CustomData\":null}]}",
+        "[2017-06-30 11:37:11.960 -04:00 - callService - main] call.clientServerClockDiff: 353",
+        "[2017-06-30 11:37:11.961 -04:00 - callService - main] CallUpdated: call 84 isVideo=false",
+        "[2017-06-30 11:37:11.961 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:11.985 -04:00 - alertController - main] Call added: 84",
+        "[2017-06-30 11:37:11.988 -04:00 - alertController - main] Call does not meet conditions for alert",
+        "[2017-06-30 11:37:12.041 -04:00 - app - main] showSubState: state=call; params={\"hCall\":84}; windowName=call_84",
+        "[2017-06-30 11:37:12.068 -04:00 - callDetail - main] Using softphone: true",
+        "[2017-06-30 11:37:12.091 -04:00 - sip - main] onSignalStateChange:pcState=have-remote-offer/new/new",
+        "[2017-06-30 11:37:12.096 -04:00 - sip - main] setDescriptionPromiseResolve: remote description set, pcState=have-remote-offer/new/new",
+        "[2017-06-30 11:37:12.098 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nSIP/2.0 180 Ringing\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK55U4y5mDQr4vF\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082452 INVITE\r\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\r\nSupported: outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:12.098 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"SIP/2.0 180 Ringing\\r\\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK55U4y5mDQr4vF\\r\\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\\r\\nFrom: \\\"v000019\\\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\\r\\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\\r\\nCSeq: 109082452 INVITE\\r\\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\\r\\nSupported: outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Length: 0\\r\\n\\r\\n\"",
+        "[2017-06-30 11:37:12.099 -04:00 - sip - main] Invite received, status=",
+        "[2017-06-30 11:37:12.099 -04:00 - sip - main] SIP call event: i_new_call",
+        "[2017-06-30 11:37:12.100 -04:00 - wcs - main] Sending VCC message: vccs:get_ice, payload: {}",
+        "[2017-06-30 11:37:12.299 -04:00 - sip - main] onaddstream: adding stream: ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN",
+        "[2017-06-30 11:37:12.300 -04:00 - sip - main] stream ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN, active=true, audio track a0, a0, enabled=true, muted=false, readyState=live, remote=undefined",
+        "[2017-06-30 11:37:12.301 -04:00 - sip - main] render: remote",
+        "[2017-06-30 11:37:12.302 -04:00 - sip - main] render: remote.muted=false, paused=false",
+        "[2017-06-30 11:37:12.303 -04:00 - sip - main] stream ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN, active=true, audio track a0, a0, enabled=true, muted=false, readyState=live, remote=undefined",
+        "[2017-06-30 11:37:12.305 -04:00 - sip - main] ontrack: event={\"isTrusted\":false,\"track\":{},\"receiver\":{},\"streams\":[{}]}",
+        "[2017-06-30 11:37:12.305 -04:00 - sip - main] ontrack: audio track a0, enabled=true added to stream[{}]",
+        "[2017-06-30 11:37:12.510 -04:00 - sip - main] sip.transport: received WebSocket text message:\n\nNOTIFY sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws;intercom=true SIP/2.0\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK6eNX005gm1tFB\r\nMax-Forwards: 70\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082453 NOTIFY\r\nContact: <sip:mod_sofia@76.127.233.199:5060>\r\nUser-Agent: FreeSWITCH-mod_sofia/1.6.14+git~20170508T175959Z~1f8c819c69~64bit\r\nAllow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, INFO, UPDATE, REGISTER, REFER, NOTIFY\r\nSupported: timer, path, replaces\r\nEvent: talk\r\nAllow-Events: talk, hold, conference, refer\r\nSubscription-State: terminated;reason=noresource\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:12.517 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nSIP/2.0 200 OK\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK6eNX005gm1tFB\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082453 NOTIFY\r\nSupported: outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:12.517 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"SIP/2.0 200 OK\\r\\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK6eNX005gm1tFB\\r\\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\\r\\nFrom: \\\"v000019\\\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\\r\\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\\r\\nCSeq: 109082453 NOTIFY\\r\\nSupported: outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Length: 0\\r\\n\\r\\n\"",
+        "[2017-06-30 11:37:12.521 -04:00 - sip - main] sip.transaction.nist: Timer J expired for non-INVITE server transaction z9hG4bK6eNX005gm1tFB",
+        "[2017-06-30 11:37:12.938 -04:00 - wcs - main] extensionAvailabilitySubscribe: [1083,1096,1307,1440,16610]",
+        "[2017-06-30 11:37:12.938 -04:00 - wcs - main] Sending WCAPI message: ExtensionAvailabilitySubscribe, payload: {\"PBEIds\":[1083,1096,1307,1440,16610]}",
+        "[2017-06-30 11:37:13.008 -04:00 - sip - main] checkTraffic skipped for call d4258303-d84c-1235-3da9-000c2917f76eHtSvgHtcyFQ6r, accepted: false, escalatingVideo: false",
+        "[2017-06-30 11:37:13.092 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:37:13.114 -04:00 - wcs - main] Sending VCC message: vcc/profile/list, payload: {\"UserIds\":[11]}",
+        "[2017-06-30 11:37:13.137 -04:00 - wcs - main] WCAPI message received: ExtensionAvailabilityUpdates, requestId: 0, data: {\"AvailUpdates\":[{\"Id\":1083,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1140,\"IMState\":-1},{\"Id\":1096,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1},{\"Id\":1307,\"AVState\":1,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1165,\"IMState\":2},{\"Id\":1440,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1212,\"IMState\":0},{\"Id\":16610,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1}]}",
+        "[2017-06-30 11:37:13.138 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:13.203 -04:00 - wcs - main] Sending VCC message: vcc/profile/update, payload: {\"Presence\":1}",
+        "[2017-06-30 11:37:13.219 -04:00 - settingsController - main] Loading user details",
+        "[2017-06-30 11:37:13.228 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:13.321 -04:00 - wcs - main] Sending VCC message: vcc/profile/get, payload: {\"UserId\":11}",
+        "[2017-06-30 11:37:13.403 -04:00 - settingsController - main] Loading user details",
+        "[2017-06-30 11:37:13.410 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:14.601 -04:00 - wcs - main] getICEServers timed out. Using default STUN server definitions",
+        "[2017-06-30 11:37:14.602 -04:00 - sip - main] Setting speaker ID: 2e3c7dac95bddc51a89455621c74a0824fa932236def7567c5c5d06f8059ae83, mediaElement: audio",
+        "[2017-06-30 11:37:14.602 -04:00 - sip - main] VSipSession.answer: audio, accept options={\"audio\":{},\"localVideo\":null,\"remoteVideo\":null,\"stunServers\":[\"stun:stun.l.google.com:19302\",\"stun:stun1.l.google.com:19302\"],\"turnServers\":[],\"RTCConstraints\":{\"audio\":true,\"video\":false,\"mandatory\":{\"OfferToReceiveAudio\":true,\"OfferToReceiveVideo\":false}},\"media\":{\"constraints\":{\"audio\":{\"optional\":[{\"sourceId\":\"default\"}]},\"video\":false},\"render\":{\"remote\":{}}}}",
+        "[2017-06-30 11:37:14.603 -04:00 - sip - main] sip.dialog: dialog d4258303-d84c-1235-3da9-000c2917f76e4rrdv6umg9HtSvgHtcyFQ6r  changed to CONFIRMED state",
+        "[2017-06-30 11:37:14.604 -04:00 - sip - main] getDescription: entered, pcState=have-remote-offer/new/new, media={\"constraints\":{\"audio\":{\"optional\":[{\"sourceId\":\"default\"}]},\"video\":false},\"render\":{\"remote\":{}}}",
+        "[2017-06-30 11:37:14.605 -04:00 - sip - main] Speaker set successfully",
+        "[2017-06-30 11:37:14.632 -04:00 - sip - main] getUserMediaSuccess: pcState=have-remote-offer/new/new",
+        "[2017-06-30 11:37:14.633 -04:00 - sip - main] stream SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5, active=true, audio track 7e92d50d-3c63-4d96-b0cd-640cd522e61e, Default, enabled=true, muted=false, readyState=live, remote=undefined",
+        "[2017-06-30 11:37:14.634 -04:00 - sip - main] getUserMediaSuccess: localStreams=",
+        "[2017-06-30 11:37:14.635 -04:00 - sip - main] setLocalDescription",
+        "[2017-06-30 11:37:14.637 -04:00 - sip - main] setICETimeout: timer set for 3000ms. pcState=have-remote-offer/new/new",
+        "[2017-06-30 11:37:14.637 -04:00 - sip - main] onnegotiateionneeded: e={\"isTrusted\":true}",
+        "[2017-06-30 11:37:14.638 -04:00 - sip - main] onSignalStateChange:pcState=stable/new/new",
+        "[2017-06-30 11:37:14.640 -04:00 - sip - main] oniceconnectionstatechange:pcState=stable/new/checking",
+        "[2017-06-30 11:37:14.643 -04:00 - sip - main] onicegatheringstatechange: state={\"isTrusted\":true}",
+        "[2017-06-30 11:37:14.644 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 ufrag 3TS6 network-id 4 network-cost 50",
+        "[2017-06-30 11:37:14.644 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 ufrag 3TS6 network-id 3",
+        "[2017-06-30 11:37:14.645 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 ufrag 3TS6 network-id 2",
+        "[2017-06-30 11:37:14.648 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 ufrag 3TS6 network-id 1",
+        "[2017-06-30 11:37:14.649 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 ufrag FGXm network-id 4 network-cost 50",
+        "[2017-06-30 11:37:14.650 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 ufrag FGXm network-id 3",
+        "[2017-06-30 11:37:14.650 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 ufrag FGXm network-id 2",
+        "[2017-06-30 11:37:14.650 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 ufrag FGXm network-id 1",
+        "[2017-06-30 11:37:14.743 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 ufrag 3TS6 network-id 4 network-cost 50",
+        "[2017-06-30 11:37:14.744 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 ufrag 3TS6 network-id 3",
+        "[2017-06-30 11:37:14.744 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 ufrag 3TS6 network-id 2",
+        "[2017-06-30 11:37:14.744 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 ufrag 3TS6 network-id 1",
+        "[2017-06-30 11:37:14.745 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 ufrag FGXm network-id 4 network-cost 50",
+        "[2017-06-30 11:37:14.745 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 ufrag FGXm network-id 3",
+        "[2017-06-30 11:37:14.745 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 ufrag FGXm network-id 2",
+        "[2017-06-30 11:37:14.746 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 ufrag FGXm network-id 1",
+        "[2017-06-30 11:37:14.748 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 ufrag 3TS6 network-id 1",
+        "[2017-06-30 11:37:14.748 -04:00 - sip - main] setICETimeout: timer set for 250ms. pcState=stable/gathering/checking",
+        "[2017-06-30 11:37:14.749 -04:00 - sip - main] onicecandidate, pcState=stable/gathering/checkingcandidate: candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 ufrag FGXm network-id 1",
+        "[2017-06-30 11:37:14.749 -04:00 - sip - main] setICETimeout: timer set for 250ms. pcState=stable/gathering/checking",
+        "[2017-06-30 11:37:14.795 -04:00 - sip - main] onicegatheringstatechange: state={\"isTrusted\":true}",
+        "[2017-06-30 11:37:15.000 -04:00 - sip - main] ICE Complete, resolving getDescription: ",
+        "[2017-06-30 11:37:15.001 -04:00 - sip - main] getDescription: getDescriptionResolved, sdpDesc={\"type\":\"answer\",\"sdp\":\"v=0\\r\\no=- 8158323790077533259 2 IN IP4 127.0.0.1\\r\\ns=-\\r\\nt=0 0\\r\\na=msid-semantic: WMS SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\\r\\nm=audio 55393 RTP/SAVPF 0 8\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\\r\\na=ice-ufrag:3TS6\\r\\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:audio\\r\\na=sendrecv\\r\\na=rtcp-mux\\r\\na=rtpmap:0 PCMU/8000\\r\\na=rtpmap:8 PCMA/8000\\r\\na=ssrc:115063965 cname:gPeu5Tmv/UXRcFEy\\r\\na=ssrc:115063965 msid:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5 7e92d50d-3c63-4d96-b0cd-640cd522e61e\\r\\na=ssrc:115063965 mslabel:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\\r\\na=ssrc:115063965 label:7e92d50d-3c63-4d96-b0cd-640cd522e61e\\r\\nm=video 55397 RTP/SAVPF 100\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\\r\\na=ice-ufrag:FGXm\\r\\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:video\\r\\na=inactive\\r\\na=rtcp-mux\\r\\na=rtpmap:100 VP8/90000\\r\\na=rtcp-fb:100 ccm fir\\r\\na=rtcp-fb:100 nack\\r\\na=rtcp-fb:100 nack pli\\r\\n\"}",
+        "[2017-06-30 11:37:15.002 -04:00 - sip - main] saveDTLSSetup: Saved a=setup:active",
+        "[2017-06-30 11:37:15.003 -04:00 - sip - main] getDescription: resolved{\"type\":\"answer\",\"sdp\":\"v=0\\r\\no=- 8158323790077533259 2 IN IP4 127.0.0.1\\r\\ns=-\\r\\nt=0 0\\r\\na=msid-semantic: WMS SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\\r\\nm=audio 55393 RTP/SAVPF 0 8\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\\r\\na=ice-ufrag:3TS6\\r\\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:audio\\r\\na=sendrecv\\r\\na=rtcp-mux\\r\\na=rtpmap:0 PCMU/8000\\r\\na=rtpmap:8 PCMA/8000\\r\\na=ssrc:115063965 cname:gPeu5Tmv/UXRcFEy\\r\\na=ssrc:115063965 msid:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5 7e92d50d-3c63-4d96-b0cd-640cd522e61e\\r\\na=ssrc:115063965 mslabel:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\\r\\na=ssrc:115063965 label:7e92d50d-3c63-4d96-b0cd-640cd522e61e\\r\\nm=video 55397 RTP/SAVPF 100\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\\r\\na=ice-ufrag:FGXm\\r\\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:video\\r\\na=inactive\\r\\na=rtcp-mux\\r\\na=rtpmap:100 VP8/90000\\r\\na=rtcp-fb:100 ccm fir\\r\\na=rtcp-fb:100 nack\\r\\na=rtcp-fb:100 nack pli\\r\\n\"}",
+        "[2017-06-30 11:37:15.005 -04:00 - sip - main] render: remote",
+        "[2017-06-30 11:37:15.006 -04:00 - sip - main] render: remote.muted=false, paused=false",
+        "[2017-06-30 11:37:15.007 -04:00 - sip - main] stream ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN, active=true, audio track a0, a0, enabled=true, muted=false, readyState=live, remote=undefined",
+        "[2017-06-30 11:37:15.009 -04:00 - sip - main] render: remote",
+        "[2017-06-30 11:37:15.010 -04:00 - sip - main] render: remote.muted=false, paused=false",
+        "[2017-06-30 11:37:15.010 -04:00 - sip - main] stream ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN, active=true, audio track a0, a0, enabled=true, muted=false, readyState=live, remote=undefined",
+        "[2017-06-30 11:37:15.011 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nSIP/2.0 200 OK\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK55U4y5mDQr4vF\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082452 INVITE\r\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\r\nAllow: ACK,CANCEL,BYE,OPTIONS,INFO,NOTIFY,INVITE\r\nSupported: outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Type: application/sdp\r\nContent-Length: 3349\r\n\r\nv=0\r\no=- 8158323790077533259 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=msid-semantic: WMS SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\r\nm=audio 55393 RTP/SAVPF 0 8\r\nc=IN IP4 76.127.233.199\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\r\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\r\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\r\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\r\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\r\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\r\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\r\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\r\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\r\na=ice-ufrag:3TS6\r\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:audio\r\na=sendrecv\r\na=rtcp-mux\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=ssrc:115063965 cname:gPeu5Tmv/UXRcFEy\r\na=ssrc:115063965 msid:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5 7e92d50d-3c63-4d96-b0cd-640cd522e61e\r\na=ssrc:115063965 mslabel:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\r\na=ssrc:115063965 label:7e92d50d-3c63-4d96-b0cd-640cd522e61e\r\nm=video 55397 RTP/SAVPF 100\r\nc=IN IP4 76.127.233.199\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\r\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\r\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\r\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\r\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\r\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\r\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\r\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\r\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\r\na=ice-ufrag:FGXm\r\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:video\r\na=inactive\r\na=rtcp-mux\r\na=rtpmap:100 VP8/90000\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\n\n",
+        "[2017-06-30 11:37:15.012 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"SIP/2.0 200 OK\\r\\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK55U4y5mDQr4vF\\r\\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\\r\\nFrom: \\\"v000019\\\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\\r\\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\\r\\nCSeq: 109082452 INVITE\\r\\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\\r\\nAllow: ACK,CANCEL,BYE,OPTIONS,INFO,NOTIFY,INVITE\\r\\nSupported: outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Type: application/sdp\\r\\nContent-Length: 3349\\r\\n\\r\\nv=0\\r\\no=- 8158323790077533259 2 IN IP4 127.0.0.1\\r\\ns=-\\r\\nt=0 0\\r\\na=msid-semantic: WMS SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\\r\\nm=audio 55393 RTP/SAVPF 0 8\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\\r\\na=ice-ufrag:3TS6\\r\\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:audio\\r\\na=sendrecv\\r\\na=rtcp-mux\\r\\na=rtpmap:0 PCMU/8000\\r\\na=rtpmap:8 PCMA/8000\\r\\na=ssrc:115063965 cname:gPeu5Tmv/UXRcFEy\\r\\na=ssrc:115063965 msid:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5 7e92d50d-3c63-4d96-b0cd-640cd522e61e\\r\\na=ssrc:115063965 mslabel:SvKOuWiBjnPqPDFARgPUWgYq8ZTPh5gVP6q5\\r\\na=ssrc:115063965 label:7e92d50d-3c63-4d96-b0cd-640cd522e61e\\r\\nm=video 55397 RTP/SAVPF 100\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\\r\\na=ice-ufrag:FGXm\\r\\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:video\\r\\na=inactive\\r\\na=rtcp-mux\\r\\na=rtpmap:100 VP8/90000\\r\\na=rtcp-fb:100 ccm fir\\r\\na=rtcp-fb:100 nack\\r\\na=rtcp-fb:100 nack pli\\r\\n\"",
+        "[2017-06-30 11:37:15.013 -04:00 - sip - main] videoTokens = ",
+        "[2017-06-30 11:37:15.014 -04:00 - sip - main] videoTokens = ",
+        "[2017-06-30 11:37:15.015 -04:00 - sip - main] Accepted: Using video codec VP8/90000",
+        "[2017-06-30 11:37:15.016 -04:00 - sip - main] SIP call event: accepted",
+        "[2017-06-30 11:37:15.016 -04:00 - sip - main] render: play exception",
+        "[2017-06-30 11:37:15.031 -04:00 - sip - main] checkTraffic: d4258303-d84c-1235-3da9-000c2917f76eHtSvgHtcyFQ6r - no lastBytesReceived - setting to 0, video: {\"googPlisSent\":\"0\",\"googFrameRateOutput\":\"0\",\"bytesReceived\":\"0\",\"googFirsSent\":\"0\",\"googNacksSent\":\"0\",\"packetsReceived\":\"0\",\"packetsLost\":\"0\"}",
+        "[2017-06-30 11:37:15.150 -04:00 - sip - main] sip.transport: received WebSocket text message:\n\nACK sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws SIP/2.0\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK7Qep2UpmHaH2p\r\nMax-Forwards: 70\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082452 ACK\r\nContact: <sip:mod_sofia@76.127.233.199:5060>\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:15.206 -04:00 - sip - main] oniceconnectionstatechange:pcState=stable/complete/connected",
+        "[2017-06-30 11:37:15.207 -04:00 - sip - main] setICETimeout: timer set for 100ms. pcState=stable/complete/connected",
+        "[2017-06-30 11:37:15.211 -04:00 - sip - main] sip.transport: received WebSocket text message:\n\nINVITE sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws SIP/2.0\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK807e4p7QeK7mj\r\nMax-Forwards: 69\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082454 INVITE\r\nContact: <sip:mod_sofia@76.127.233.199:5060>\r\nCall-Info: <sip:172.23.10.91>;answer-after=0\r\nUser-Agent: FreeSWITCH-mod_sofia/1.6.14+git~20170508T175959Z~1f8c819c69~64bit\r\nAllow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, INFO, UPDATE, REGISTER, REFER, NOTIFY\r\nSupported: timer, path, replaces\r\nContent-Type: application/sdp\r\nContent-Length: 2014\r\nX-FS-Support: update_display,send_info\r\nRemote-Party-ID: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;party=calling;screen=yes;privacy=off\r\n\r\nv=0\r\no=FreeSWITCH 1498816132 1498816135 IN IP4 172.23.10.91\r\ns=FreeSWITCH\r\nc=IN IP4 172.23.10.91\r\nt=0 0\r\na=msid-semantic: WMS ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\nm=audio 20900 RTP/SAVPF 0 8\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=fingerprint:sha-256 09:63:A6:CD:80:79:EE:E4:D7:D4:48:00:89:F9:19:D0:D6:FC:3E:9B:AC:F2:51:E0:06:A9:DE:8C:7A:92:F3:9C\r\na=setup:actpass\r\na=rtcp-mux\r\na=rtcp:20900 IN IP4 172.23.10.91\r\na=ssrc:3311530168 cname:B4jsRUf1SD3LHexj\r\na=ssrc:3311530168 msid:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN a0\r\na=ssrc:3311530168 mslabel:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\na=ssrc:3311530168 label:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbNa0\r\na=ice-ufrag:fyysdozFOKpobq2D\r\na=ice-pwd:lbV2V0UEuNf1SDbX1zf4OEzt\r\na=candidate:8782674878 1 udp 659136 172.23.10.91 20900 typ host generation 0\r\na=candidate:6286478128 1 udp 659136 76.127.233.199 20900 typ host generation 0\na=candidate:8782674878 2 udp 659136 172.23.10.91 20900 typ host generation 0\r\na=candidate:6286478128 2 udp 659136 76.127.233.199 20900 typ host generation 0\na=ptime:20\r\na=sendrecv\r\nm=video 20830 RTP/SAVPF 100\r\nb=AS:1024\r\na=rtpmap:100 VP8/90000\r\na=inactive\r\na=fingerprint:sha-256 09:63:A6:CD:80:79:EE:E4:D7:D4:48:00:89:F9:19:D0:D6:FC:3E:9B:AC:F2:51:E0:06:A9:DE:8C:7A:92:F3:9C\r\na=setup:actpass\r\na=rtcp-mux\r\na=rtcp:20830 IN IP4 172.23.10.91\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 ccm tmmbr\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=ssrc:2562132540 cname:B4jsRUf1SD3LHexj\r\na=ssrc:2562132540 msid:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN v0\r\na=ssrc:2562132540 mslabel:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN\r\na=ssrc:2562132540 label:ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbNv0\r\na=ice-ufrag:rr0CWO5okJr5Gwmf\r\na=ice-pwd:BrA5szjR2Wd0nNgE476RL26W\r\na=candidate:2160328715 1 udp 659136 172.23.10.91 20830 typ host generation 0\r\na=candidate:5633370193 1 udp 659136 76.127.233.199 20830 typ host generation 0\na=candidate:2160328715 2 udp 659135 172.23.10.91 20830 typ host generation 0\r\na=candidate:5633370193 2 udp 659135 76.127.233.199 20830 typ host generation 0\na=end-of-candidates\r\n\n",
+        "[2017-06-30 11:37:15.216 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nSIP/2.0 100 Trying\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK807e4p7QeK7mj\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082454 INVITE\r\nSupported: outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:15.217 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"SIP/2.0 100 Trying\\r\\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK807e4p7QeK7mj\\r\\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\\r\\nFrom: \\\"v000019\\\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\\r\\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\\r\\nCSeq: 109082454 INVITE\\r\\nSupported: outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Length: 0\\r\\n\\r\\n\"",
+        "[2017-06-30 11:37:15.218 -04:00 - sip - main] sip.inviteservercontext: re-INVITE received",
+        "[2017-06-30 11:37:15.219 -04:00 - sip - main] onSetDescription: type=",
+        "[2017-06-30 11:37:15.219 -04:00 - sip - main] onSetDescription: pcState=peerConnection.signalingstate=stable, iceGatheringState=complete, iceConnectionState=connected",
+        "[2017-06-30 11:37:15.220 -04:00 - sip - main] onSetDescription: proposed",
+        "[2017-06-30 11:37:15.220 -04:00 - sip - main] onSetDescription: current",
+        "[2017-06-30 11:37:15.222 -04:00 - sip - main] onSetDescription: currentVideo=false, proposedVideo=false",
+        "[2017-06-30 11:37:15.223 -04:00 - sip - main] acceptSetDescription: Resolving setDescriptionPromise",
+        "[2017-06-30 11:37:15.223 -04:00 - sip - main] setDescriptionPromiseResolve: pcState=stable/complete/connected",
+        "[2017-06-30 11:37:15.229 -04:00 - sip - main] render: remote",
+        "[2017-06-30 11:37:15.230 -04:00 - sip - main] render: remote.muted=false, paused=false",
+        "[2017-06-30 11:37:15.232 -04:00 - sip - main] stream ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN, active=true, audio track a0, a0, enabled=true, muted=false, readyState=live, remote=undefined",
+        "[2017-06-30 11:37:15.233 -04:00 - sip - main] setDescriptionPromiseResolve: remote description set, pcState=have-remote-offer/complete/connected",
+        "[2017-06-30 11:37:15.234 -04:00 - sip - main] getDescription: entered, pcState=have-remote-offer/complete/connected, media={\"constraints\":{\"audio\":{\"optional\":[{\"sourceId\":\"default\"}]},\"video\":false},\"render\":{\"remote\":{}}}",
+        "[2017-06-30 11:37:15.238 -04:00 - sip - main] onSignalStateChange:pcState=have-remote-offer/complete/connected",
+        "[2017-06-30 11:37:15.239 -04:00 - sip - main] setICETimeout: timer set for 100ms. pcState=have-remote-offer/complete/connected",
+        "[2017-06-30 11:37:15.243 -04:00 - sip - main] getUserMediaSuccess: pcState=have-remote-offer/complete/connected",
+        "[2017-06-30 11:37:15.246 -04:00 - sip - main] stream 5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv, active=true, audio track 7d4f667d-8125-412d-a6ba-b98fab647dde, Default, enabled=true, muted=false, readyState=live, remote=undefined",
+        "[2017-06-30 11:37:15.246 -04:00 - sip - main] getUserMediaSuccess: localStreams=",
+        "[2017-06-30 11:37:15.248 -04:00 - sip - main] setLocalDescription",
+        "[2017-06-30 11:37:15.250 -04:00 - sip - main] setICETimeout: timer set for 3000ms. pcState=have-remote-offer/complete/connected",
+        "[2017-06-30 11:37:15.251 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":181,\"Features\":8388609}",
+        "[2017-06-30 11:37:15.251 -04:00 - callService - main] CallPartyUpdate: call 84 isVideo=false, wasVideo=false",
+        "[2017-06-30 11:37:15.252 -04:00 - callService - main] isVideoEscalator: hCall",
+        "[2017-06-30 11:37:15.252 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.277 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.292 -04:00 - sip - main] onnegotiateionneeded: e={\"isTrusted\":true}",
+        "[2017-06-30 11:37:15.292 -04:00 - sip - main] onnegotiateionneeded: e={\"isTrusted\":true}",
+        "[2017-06-30 11:37:15.310 -04:00 - sip - main] onSignalStateChange:pcState=stable/complete/connected",
+        "[2017-06-30 11:37:15.311 -04:00 - sip - main] setICETimeout: timer set for 100ms. pcState=stable/complete/connected",
+        "[2017-06-30 11:37:15.312 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":182,\"Features\":1}",
+        "[2017-06-30 11:37:15.312 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.338 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.380 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":181,\"PartyPbeId\":1307,\"PartyPbeClass\":1301,\"CallerIdName\":\"Kaczor\",\"PrimaryName\":\"Kaczor\"}",
+        "[2017-06-30 11:37:15.381 -04:00 - callService - main] CallPartyUpdate: call 84 isVideo=false, wasVideo=false",
+        "[2017-06-30 11:37:15.384 -04:00 - callService - main] isVideoEscalator: hCall",
+        "[2017-06-30 11:37:15.386 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.414 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.438 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":181,\"LocationPbeId\":1307,\"LocationPbeIdClass\":1301}",
+        "[2017-06-30 11:37:15.439 -04:00 - callService - main] CallPartyUpdate: call 84 isVideo=false, wasVideo=false",
+        "[2017-06-30 11:37:15.439 -04:00 - callService - main] isVideoEscalator: hCall",
+        "[2017-06-30 11:37:15.440 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.477 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.487 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":181,\"LocationPbeId\":1307,\"LocationPbeIdClass\":1301}",
+        "[2017-06-30 11:37:15.488 -04:00 - callService - main] CallPartyUpdate: call 84 isVideo=false, wasVideo=false",
+        "[2017-06-30 11:37:15.488 -04:00 - callService - main] isVideoEscalator: hCall",
+        "[2017-06-30 11:37:15.491 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.522 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.530 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":181,\"PartyPbeId\":1307,\"PartyPbeClass\":1301,\"CallerIdName\":\"Kaczor\",\"PrimaryName\":\"Kaczor\"}",
+        "[2017-06-30 11:37:15.532 -04:00 - callService - main] CallPartyUpdate: call 84 isVideo=false, wasVideo=false",
+        "[2017-06-30 11:37:15.534 -04:00 - callService - main] isVideoEscalator: hCall",
+        "[2017-06-30 11:37:15.536 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.567 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.586 -04:00 - sip - main] ICE Complete, resolving getDescription: ",
+        "[2017-06-30 11:37:15.587 -04:00 - sip - main] getDescription: getDescriptionResolved, sdpDesc={\"type\":\"answer\",\"sdp\":\"v=0\\r\\no=- 8158323790077533259 3 IN IP4 127.0.0.1\\r\\ns=-\\r\\nt=0 0\\r\\na=msid-semantic: WMS 5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\\r\\nm=audio 55393 RTP/SAVPF 0 8\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\\r\\na=ice-ufrag:3TS6\\r\\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:audio\\r\\na=sendrecv\\r\\na=rtcp-mux\\r\\na=rtpmap:0 PCMU/8000\\r\\na=rtpmap:8 PCMA/8000\\r\\na=ssrc:3028045660 cname:gPeu5Tmv/UXRcFEy\\r\\na=ssrc:3028045660 msid:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv 7d4f667d-8125-412d-a6ba-b98fab647dde\\r\\na=ssrc:3028045660 mslabel:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\\r\\na=ssrc:3028045660 label:7d4f667d-8125-412d-a6ba-b98fab647dde\\r\\nm=video 55397 RTP/SAVPF 100\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\\r\\na=ice-ufrag:FGXm\\r\\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:video\\r\\na=inactive\\r\\na=rtcp-mux\\r\\na=rtpmap:100 VP8/90000\\r\\na=rtcp-fb:100 ccm fir\\r\\na=rtcp-fb:100 nack\\r\\na=rtcp-fb:100 nack pli\\r\\n\"}",
+        "[2017-06-30 11:37:15.587 -04:00 - sip - main] saveDTLSSetup: Already set to a=setup:active",
+        "[2017-06-30 11:37:15.588 -04:00 - sip - main] getDescription: resolved{\"type\":\"answer\",\"sdp\":\"v=0\\r\\no=- 8158323790077533259 3 IN IP4 127.0.0.1\\r\\ns=-\\r\\nt=0 0\\r\\na=msid-semantic: WMS 5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\\r\\nm=audio 55393 RTP/SAVPF 0 8\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\\r\\na=ice-ufrag:3TS6\\r\\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:audio\\r\\na=sendrecv\\r\\na=rtcp-mux\\r\\na=rtpmap:0 PCMU/8000\\r\\na=rtpmap:8 PCMA/8000\\r\\na=ssrc:3028045660 cname:gPeu5Tmv/UXRcFEy\\r\\na=ssrc:3028045660 msid:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv 7d4f667d-8125-412d-a6ba-b98fab647dde\\r\\na=ssrc:3028045660 mslabel:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\\r\\na=ssrc:3028045660 label:7d4f667d-8125-412d-a6ba-b98fab647dde\\r\\nm=video 55397 RTP/SAVPF 100\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\\r\\na=ice-ufrag:FGXm\\r\\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:video\\r\\na=inactive\\r\\na=rtcp-mux\\r\\na=rtpmap:100 VP8/90000\\r\\na=rtcp-fb:100 ccm fir\\r\\na=rtcp-fb:100 nack\\r\\na=rtcp-fb:100 nack pli\\r\\n\"}",
+        "[2017-06-30 11:37:15.591 -04:00 - sip - main] render: remote",
+        "[2017-06-30 11:37:15.592 -04:00 - sip - main] render: remote.muted=false, paused=false",
+        "[2017-06-30 11:37:15.592 -04:00 - sip - main] stream ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN, active=true, audio track a0, a0, enabled=true, muted=false, readyState=live, remote=undefined",
+        "[2017-06-30 11:37:15.594 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nSIP/2.0 200 OK\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK807e4p7QeK7mj\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082454 INVITE\r\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\r\nSupported: outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Type: application/sdp\r\nContent-Length: 3353\r\n\r\nv=0\r\no=- 8158323790077533259 3 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=msid-semantic: WMS 5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\r\nm=audio 55393 RTP/SAVPF 0 8\r\nc=IN IP4 76.127.233.199\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\r\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\r\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\r\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\r\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\r\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\r\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\r\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\r\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\r\na=ice-ufrag:3TS6\r\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:audio\r\na=sendrecv\r\na=rtcp-mux\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=ssrc:3028045660 cname:gPeu5Tmv/UXRcFEy\r\na=ssrc:3028045660 msid:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv 7d4f667d-8125-412d-a6ba-b98fab647dde\r\na=ssrc:3028045660 mslabel:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\r\na=ssrc:3028045660 label:7d4f667d-8125-412d-a6ba-b98fab647dde\r\nm=video 55397 RTP/SAVPF 100\r\nc=IN IP4 76.127.233.199\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\r\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\r\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\r\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\r\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\r\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\r\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\r\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\r\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\r\na=ice-ufrag:FGXm\r\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\r\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\r\na=setup:active\r\na=mid:video\r\na=inactive\r\na=rtcp-mux\r\na=rtpmap:100 VP8/90000\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\n\n",
+        "[2017-06-30 11:37:15.594 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"SIP/2.0 200 OK\\r\\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK807e4p7QeK7mj\\r\\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\\r\\nFrom: \\\"v000019\\\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\\r\\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\\r\\nCSeq: 109082454 INVITE\\r\\nContact: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>\\r\\nSupported: outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Type: application/sdp\\r\\nContent-Length: 3353\\r\\n\\r\\nv=0\\r\\no=- 8158323790077533259 3 IN IP4 127.0.0.1\\r\\ns=-\\r\\nt=0 0\\r\\na=msid-semantic: WMS 5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\\r\\nm=audio 55393 RTP/SAVPF 0 8\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55390 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55391 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55392 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55393 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55393 typ srflx raddr 172.23.10.50 rport 55393 generation 0 network-id 1\\r\\na=ice-ufrag:3TS6\\r\\na=ice-pwd:xljjNG2dUXu9ZV5yO2hGUY9l\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:audio\\r\\na=sendrecv\\r\\na=rtcp-mux\\r\\na=rtpmap:0 PCMU/8000\\r\\na=rtpmap:8 PCMA/8000\\r\\na=ssrc:3028045660 cname:gPeu5Tmv/UXRcFEy\\r\\na=ssrc:3028045660 msid:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv 7d4f667d-8125-412d-a6ba-b98fab647dde\\r\\na=ssrc:3028045660 mslabel:5hEEHgF40FNHsb2wfj5Ne9qeUl4ZgLojnTtv\\r\\na=ssrc:3028045660 label:7d4f667d-8125-412d-a6ba-b98fab647dde\\r\\nm=video 55397 RTP/SAVPF 100\\r\\nc=IN IP4 76.127.233.199\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=candidate:615521601 1 udp 2122255103 2001::9d38:953c:28a2:3b11:b380:1638 55394 typ host generation 0 network-id 4 network-cost 50\\r\\na=candidate:829181641 1 udp 2122197247 2601:18a:8201:d303:e828:999b:1dc2:8809 55395 typ host generation 0 network-id 3\\r\\na=candidate:722956696 1 udp 2122131711 2601:18a:8201:d303:d902:99bb:ebf3:5123 55396 typ host generation 0 network-id 2\\r\\na=candidate:1861022501 1 udp 2122063615 172.23.10.50 55397 typ host generation 0 network-id 1\\r\\na=candidate:1781785009 1 tcp 1518275327 2001::9d38:953c:28a2:3b11:b380:1638 9 typ host tcptype active generation 0 network-id 4 network-cost 50\\r\\na=candidate:2146415161 1 tcp 1518217471 2601:18a:8201:d303:e828:999b:1dc2:8809 9 typ host tcptype active generation 0 network-id 3\\r\\na=candidate:1704234344 1 tcp 1518151935 2601:18a:8201:d303:d902:99bb:ebf3:5123 9 typ host tcptype active generation 0 network-id 2\\r\\na=candidate:544149461 1 tcp 1518083839 172.23.10.50 9 typ host tcptype active generation 0 network-id 1\\r\\na=candidate:2566687473 1 udp 1685855999 76.127.233.199 55397 typ srflx raddr 172.23.10.50 rport 55397 generation 0 network-id 1\\r\\na=ice-ufrag:FGXm\\r\\na=ice-pwd:QmqWrabV2Mn6uVF6P4eE0Q9X\\r\\na=fingerprint:sha-256 70:1B:A5:28:7D:15:B1:F3:A9:6B:E0:27:6D:3B:9B:D0:2D:78:01:2A:52:15:FE:37:2F:56:55:28:D6:C1:9F:9C\\r\\na=setup:active\\r\\na=mid:video\\r\\na=inactive\\r\\na=rtcp-mux\\r\\na=rtpmap:100 VP8/90000\\r\\na=rtcp-fb:100 ccm fir\\r\\na=rtcp-fb:100 nack\\r\\na=rtcp-fb:100 nack pli\\r\\n\"",
+        "[2017-06-30 11:37:15.658 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":182,\"PartyPbeId\":1314,\"PartyPbeClass\":3301,\"CallerIdName\":\"Conference Bridge\",\"PrimaryName\":\"Conference Bridge\"}",
+        "[2017-06-30 11:37:15.659 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.702 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.714 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":181,\"Status\":11,\"Features\":8404993}",
+        "[2017-06-30 11:37:15.714 -04:00 - callService - main] CallPartyUpdate: call 84 isVideo=false, wasVideo=false",
+        "[2017-06-30 11:37:15.716 -04:00 - callService - main] isVideoEscalator: hCall",
+        "[2017-06-30 11:37:15.716 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.747 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.761 -04:00 - wcs - main] WCAPI message received: CallPartyUpdate, requestId: 0, data: {\"hCall\":84,\"hParty\":182,\"Status\":27,\"Features\":16393}",
+        "[2017-06-30 11:37:15.762 -04:00 - callService - main] call",
+        "[2017-06-30 11:37:15.800 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:15.951 -04:00 - sip - main] sip.transport: received WebSocket text message:\n\nACK sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws SIP/2.0\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bK99075HrUBvX7D\r\nMax-Forwards: 70\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082454 ACK\r\nContact: <sip:mod_sofia@76.127.233.199:5060>\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:16.172 -04:00 - wcs - main] extensionAvailabilitySubscribe: [1083,1096,1307,1314,1440,16610]",
+        "[2017-06-30 11:37:16.172 -04:00 - wcs - main] Sending WCAPI message: ExtensionAvailabilitySubscribe, payload: {\"PBEIds\":[1083,1096,1307,1314,1440,16610]}",
+        "[2017-06-30 11:37:16.322 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:37:16.336 -04:00 - wcs - main] Sending VCC message: vcc/profile/list, payload: {\"UserIds\":[11]}",
+        "[2017-06-30 11:37:16.369 -04:00 - wcs - main] WCAPI message received: ExtensionAvailabilityUpdates, requestId: 0, data: {\"AvailUpdates\":[{\"Id\":1083,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1140,\"IMState\":-1},{\"Id\":1096,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1},{\"Id\":1307,\"AVState\":1,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1165,\"IMState\":2},{\"Id\":1314,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1},{\"Id\":1440,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1212,\"IMState\":0},{\"Id\":16610,\"AVState\":0,\"PS\":null,\"PSIcon\":null,\"PSCat\":null,\"PSId\":null,\"IMState\":-1}]}",
+        "[2017-06-30 11:37:16.370 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:16.413 -04:00 - settingsController - main] Loading user details",
+        "[2017-06-30 11:37:16.419 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:17.008 -04:00 - sip - main] checkTraffic: d4258303-d84c-1235-3da9-000c2917f76eHtSvgHtcyFQ6r - bytesReceived 14112 greater than lastBytesReceived 0 - setting to 14112, video: {\"googPlisSent\":\"0\",\"googFrameRateOutput\":\"0\",\"bytesReceived\":\"0\",\"googFirsSent\":\"0\",\"googNacksSent\":\"0\",\"packetsReceived\":\"0\",\"packetsLost\":\"0\"}",
+        "[2017-06-30 11:37:17.885 -04:00 - wcs - main] Sending WCAPI message: CallPartyDisconnect, requestId: 5, payload: {\"hParty\":181}",
+        "[2017-06-30 11:37:18.050 -04:00 - wcs - main] WCAPI message received: CallDoneNotification, requestId: 0, data: {\"hCall\":84}",
+        "[2017-06-30 11:37:18.051 -04:00 - callService - main] Call done notification from WCAPI. hCall: 84",
+        "[2017-06-30 11:37:18.052 -04:00 - callService - main] pendingCallLink: clearWaveId 84",
+        "[2017-06-30 11:37:18.059 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 1 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:18.083 -04:00 - callDetail - main] callDetail.callListUpdated: [object Object] 2 hCall=84 hCallParent=undefined secondaryCall=none",
+        "[2017-06-30 11:37:18.086 -04:00 - callDetail - main] Call deleted. hCall: 84",
+        "[2017-06-30 11:37:18.088 -04:00 - app - main] showSubState: state=; params=undefined; windowName=undefined",
+        "[2017-06-30 11:37:18.124 -04:00 - wcs - main] WCAPI message received: ExtensionAvailabilityUpdates, requestId: 0, data: {\"AvailUpdates\":[{\"Id\":1307,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1165,\"IMState\":2}]}",
+        "[2017-06-30 11:37:18.127 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:18.166 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 5, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:37:18.432 -04:00 - sip - main] sip.transport: received WebSocket text message:\n\nBYE sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws SIP/2.0\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bKaKt07c9y84KtS\r\nMax-Forwards: 70\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082455 BYE\r\nUser-Agent: FreeSWITCH-mod_sofia/1.6.14+git~20170508T175959Z~1f8c819c69~64bit\r\nAllow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, INFO, UPDATE, REGISTER, REFER, NOTIFY\r\nSupported: timer, path, replaces\r\nReason: Q.850;cause=16;text=\"NORMAL_CLEARING\"\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:18.438 -04:00 - sip - main] sip.transport: sending WebSocket message:\n\nSIP/2.0 200 OK\r\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bKaKt07c9y84KtS\r\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\r\nFrom: \"v000019\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\r\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\r\nCSeq: 109082455 BYE\r\nSupported: outbound\r\nUser-Agent: SIP.js/0.7.2\r\nContent-Length: 0\r\n\r\n\n",
+        "[2017-06-30 11:37:18.438 -04:00 - wcs - main] Sending VCC message: vcc/vccg-gateway/gateway/1000028/sip/send, payload: \"SIP/2.0 200 OK\\r\\nVia: SIP/2.0/WSS 172.23.10.91:5066;branch=z9hG4bKaKt07c9y84KtS\\r\\nTo: <sip:h5puo6uu@qan2ajhoaj1n.invalid;transport=ws>;tag=4rrdv6umg9\\r\\nFrom: \\\"v000019\\\" <sip:v000019@vccdev.vappcenter.com>;tag=HtSvgHtcyFQ6r\\r\\nCall-ID: d4258303-d84c-1235-3da9-000c2917f76e\\r\\nCSeq: 109082455 BYE\\r\\nSupported: outbound\\r\\nUser-Agent: SIP.js/0.7.2\\r\\nContent-Length: 0\\r\\n\\r\\n\"",
+        "[2017-06-30 11:37:18.439 -04:00 - sip - main] Bye:",
+        "[2017-06-30 11:37:18.441 -04:00 - sip - main] SIP call event: terminated",
+        "[2017-06-30 11:37:18.442 -04:00 - sip - main] removeCall: callSessions=",
+        "[2017-06-30 11:37:18.445 -04:00 - sip - main] Call removed:",
+        "[2017-06-30 11:37:18.446 -04:00 - sip - main] sip.inviteservercontext: closing INVITE session d4258303-d84c-1235-3da9-000c2917f76eHtSvgHtcyFQ6r",
+        "[2017-06-30 11:37:18.447 -04:00 - sip - main] closing PeerConnection",
+        "[2017-06-30 11:37:18.455 -04:00 - sip - main] media handler closed",
+        "[2017-06-30 11:37:18.455 -04:00 - sip - main] sip.dialog: dialog d4258303-d84c-1235-3da9-000c2917f76e4rrdv6umg9HtSvgHtcyFQ6r deleted",
+        "[2017-06-30 11:37:18.456 -04:00 - sip - main] Terminated:",
+        "[2017-06-30 11:37:18.459 -04:00 - sip - main] SIP call event: terminated",
+        "[2017-06-30 11:37:18.461 -04:00 - sip - main] Call removed:",
+        "[2017-06-30 11:37:18.464 -04:00 - sip - main] {\"googDecodingCTN\":\"358\",\"packetsLost\":\"0\",\"googSecondaryDecodedRate\":\"0\",\"googDecodingPLC\":\"7\",\"packetsReceived\":\"88\",\"googExpandRate\":\"0.818604\",\"googJitterReceived\":\"0\",\"googDecodingCNG\":\"0\",\"ssrc\":\"3311530168\",\"googPreferredJitterBufferMs\":\"30\",\"googSpeechExpandRate\":\"0.0637207\",\"googTrackId\":\"a0\",\"transportId\":\"Channel-audio-1\",\"mediaType\":\"audio\",\"googDecodingPLCCNG\":\"105\",\"googCodecName\":\"PCMU\",\"googDecodingNormal\":\"246\",\"audioOutputLevel\":\"3\",\"googAccelerateRate\":\"0\",\"bytesReceived\":\"22176\",\"googCurrentDelayMs\":\"77\",\"googDecodingCTSG\":\"0\",\"googCaptureStartNtpTimeMs\":\"0\",\"googPreemptiveExpandRate\":\"0\",\"googJitterBufferMs\":\"0\",\"googDecodingMuted\":\"103\",\"id\":\"ssrc_3311530168_recv\",\"type\":\"ssrc\",\"timestamp\":\"2017-06-30T15:37:18.442Z\"}",
+        "[2017-06-30 11:37:18.464 -04:00 - sip - main] {\"googCaptureStartNtpTimeMs\":\"0\",\"googTargetDelayMs\":\"0\",\"packetsLost\":\"0\",\"googDecodeMs\":\"0\",\"googFrameHeightReceived\":\"0\",\"packetsReceived\":\"0\",\"ssrc\":\"2562132540\",\"googFrameRateDecoded\":\"0\",\"googMaxDecodeMs\":\"0\",\"googTrackId\":\"v0\",\"googFrameWidthReceived\":\"0\",\"codecImplementationName\":\"unknown\",\"transportId\":\"Channel-video-1\",\"mediaType\":\"video\",\"googCodecName\":\"\",\"googFrameRateReceived\":\"0\",\"framesDecoded\":\"0\",\"googNacksSent\":\"0\",\"googFirsSent\":\"0\",\"bytesReceived\":\"0\",\"googCurrentDelayMs\":\"0\",\"googRenderDelayMs\":\"10\",\"googMinPlayoutDelayMs\":\"0\",\"googFrameRateOutput\":\"0\",\"googJitterBufferMs\":\"0\",\"googPlisSent\":\"0\",\"id\":\"ssrc_2562132540_recv\",\"type\":\"ssrc\",\"timestamp\":\"2017-06-30T15:37:18.442Z\"}",
+        "[2017-06-30 11:37:18.465 -04:00 - sip - main] {\"audioInputLevel\":\"3\",\"transportId\":\"Channel-audio-1\",\"mediaType\":\"audio\",\"googResidualEchoLikelihood\":\"0\",\"googEchoCancellationReturnLoss\":\"-100\",\"googCodecName\":\"PCMU\",\"googResidualEchoLikelihoodRecentMax\":\"0\",\"googEchoCancellationQualityMin\":\"0\",\"googTrackId\":\"7e92d50d-3c63-4d96-b0cd-640cd522e61e\",\"ssrc\":\"115063965\",\"googTypingNoiseState\":\"false\",\"googEchoCancellationReturnLossEnhancement\":\"-100\",\"packetsSent\":\"3\",\"bytesSent\":\"516\",\"aecDivergentFilterFraction\":\"-1\",\"id\":\"ssrc_115063965_send\",\"type\":\"ssrc\",\"timestamp\":\"2017-06-30T15:37:15.225Z\"}",
+        "[2017-06-30 11:37:18.465 -04:00 - sip - main] {\"audioInputLevel\":\"1\",\"transportId\":\"Channel-audio-1\",\"mediaType\":\"audio\",\"googResidualEchoLikelihood\":\"0\",\"googEchoCancellationReturnLoss\":\"-100\",\"googCodecName\":\"PCMU\",\"googResidualEchoLikelihoodRecentMax\":\"0\",\"googEchoCancellationQualityMin\":\"0\",\"googTrackId\":\"7d4f667d-8125-412d-a6ba-b98fab647dde\",\"ssrc\":\"3028045660\",\"googTypingNoiseState\":\"false\",\"googEchoCancellationReturnLossEnhancement\":\"-100\",\"packetsSent\":\"159\",\"bytesSent\":\"27348\",\"aecDivergentFilterFraction\":\"0\",\"id\":\"ssrc_3028045660_send\",\"type\":\"ssrc\",\"timestamp\":\"2017-06-30T15:37:18.442Z\"}",
+        "[2017-06-30 11:37:18.466 -04:00 - sip - main] oniceconnectionstatechange:pcState=closed/complete/closed",
+        "[2017-06-30 11:37:18.467 -04:00 - sip - main] setICETimeout: timer set for 100ms. pcState=closed/complete/closed",
+        "[2017-06-30 11:37:18.467 -04:00 - sip - main] onSignalStateChange:pcState=closed/complete/closed",
+        "[2017-06-30 11:37:18.469 -04:00 - sip - main] setICETimeout: timer set for 100ms. pcState=closed/complete/closed",
+        "[2017-06-30 11:37:18.478 -04:00 - sip - main] {\"googDecodingCTN\":\"358\",\"packetsLost\":\"0\",\"googSecondaryDecodedRate\":\"0\",\"googDecodingPLC\":\"7\",\"packetsReceived\":\"88\",\"googExpandRate\":\"0.818604\",\"googJitterReceived\":\"0\",\"googDecodingCNG\":\"0\",\"ssrc\":\"3311530168\",\"googPreferredJitterBufferMs\":\"30\",\"googSpeechExpandRate\":\"0.0637207\",\"googTrackId\":\"a0\",\"transportId\":\"Channel-audio-1\",\"mediaType\":\"audio\",\"googDecodingPLCCNG\":\"105\",\"googCodecName\":\"PCMU\",\"googDecodingNormal\":\"246\",\"audioOutputLevel\":\"3\",\"googAccelerateRate\":\"0\",\"bytesReceived\":\"22176\",\"googCurrentDelayMs\":\"77\",\"googDecodingCTSG\":\"0\",\"googCaptureStartNtpTimeMs\":\"0\",\"googPreemptiveExpandRate\":\"0\",\"googJitterBufferMs\":\"0\",\"googDecodingMuted\":\"103\",\"id\":\"ssrc_3311530168_recv\",\"type\":\"ssrc\",\"timestamp\":\"2017-06-30T15:37:18.442Z\"}",
+        "[2017-06-30 11:37:18.478 -04:00 - sip - main] {\"googCaptureStartNtpTimeMs\":\"0\",\"googTargetDelayMs\":\"0\",\"packetsLost\":\"0\",\"googDecodeMs\":\"0\",\"googFrameHeightReceived\":\"0\",\"packetsReceived\":\"0\",\"ssrc\":\"2562132540\",\"googFrameRateDecoded\":\"0\",\"googMaxDecodeMs\":\"0\",\"googTrackId\":\"v0\",\"googFrameWidthReceived\":\"0\",\"codecImplementationName\":\"unknown\",\"transportId\":\"Channel-video-1\",\"mediaType\":\"video\",\"googCodecName\":\"\",\"googFrameRateReceived\":\"0\",\"framesDecoded\":\"0\",\"googNacksSent\":\"0\",\"googFirsSent\":\"0\",\"bytesReceived\":\"0\",\"googCurrentDelayMs\":\"0\",\"googRenderDelayMs\":\"10\",\"googMinPlayoutDelayMs\":\"0\",\"googFrameRateOutput\":\"0\",\"googJitterBufferMs\":\"0\",\"googPlisSent\":\"0\",\"id\":\"ssrc_2562132540_recv\",\"type\":\"ssrc\",\"timestamp\":\"2017-06-30T15:37:18.442Z\"}",
+        "[2017-06-30 11:37:18.479 -04:00 - sip - main] {\"audioInputLevel\":\"3\",\"transportId\":\"Channel-audio-1\",\"mediaType\":\"audio\",\"googResidualEchoLikelihood\":\"0\",\"googEchoCancellationReturnLoss\":\"-100\",\"googCodecName\":\"PCMU\",\"googResidualEchoLikelihoodRecentMax\":\"0\",\"googEchoCancellationQualityMin\":\"0\",\"googTrackId\":\"7e92d50d-3c63-4d96-b0cd-640cd522e61e\",\"ssrc\":\"115063965\",\"googTypingNoiseState\":\"false\",\"googEchoCancellationReturnLossEnhancement\":\"-100\",\"packetsSent\":\"3\",\"bytesSent\":\"516\",\"aecDivergentFilterFraction\":\"-1\",\"id\":\"ssrc_115063965_send\",\"type\":\"ssrc\",\"timestamp\":\"2017-06-30T15:37:15.225Z\"}",
+        "[2017-06-30 11:37:18.479 -04:00 - sip - main] {\"audioInputLevel\":\"1\",\"transportId\":\"Channel-audio-1\",\"mediaType\":\"audio\",\"googResidualEchoLikelihood\":\"0\",\"googEchoCancellationReturnLoss\":\"-100\",\"googCodecName\":\"PCMU\",\"googResidualEchoLikelihoodRecentMax\":\"0\",\"googEchoCancellationQualityMin\":\"0\",\"googTrackId\":\"7d4f667d-8125-412d-a6ba-b98fab647dde\",\"ssrc\":\"3028045660\",\"googTypingNoiseState\":\"false\",\"googEchoCancellationReturnLossEnhancement\":\"-100\",\"packetsSent\":\"159\",\"bytesSent\":\"27348\",\"aecDivergentFilterFraction\":\"0\",\"id\":\"ssrc_3028045660_send\",\"type\":\"ssrc\",\"timestamp\":\"2017-06-30T15:37:18.442Z\"}",
+        "[2017-06-30 11:37:18.480 -04:00 - sip - main] sip.transaction.nist: Timer J expired for non-INVITE server transaction z9hG4bKaKt07c9y84KtS",
+        "[2017-06-30 11:37:18.570 -04:00 - sip - main] ICE Complete, resolving getDescription: ",
+        "[2017-06-30 11:37:18.571 -04:00 - sip - main] render: remote",
+        "[2017-06-30 11:37:18.572 -04:00 - sip - main] render: remote.muted=false, paused=false",
+        "[2017-06-30 11:37:18.573 -04:00 - sip - main] stream ca3F0WKWk8yb3dlVMaaomP0gBzlUKBbN, active=false, audio track a0, a0, enabled=true, muted=false, readyState=ended, remote=undefined",
+        "[2017-06-30 11:37:18.589 -04:00 - callDetail - main] Call deleted. hCall: 84 - moving to next communication",
+        "[2017-06-30 11:37:18.590 -04:00 - app - main] showSubState: state=; params=undefined; windowName=undefined",
+        "[2017-06-30 11:37:18.591 -04:00 - app - main] showSubState: state=; params=undefined; windowName=undefined",
+        "[2017-06-30 11:37:18.598 -04:00 - wcs - main] extensionAvailabilitySubscribe: [1307]",
+        "[2017-06-30 11:37:18.599 -04:00 - wcs - main] Sending WCAPI message: ExtensionAvailabilitySubscribe, payload: {\"PBEIds\":[1307]}",
+        "[2017-06-30 11:37:18.735 -04:00 - wcs - main] WCAPI message received: GeneralResponse, requestId: 0, data: {\"Code\":0,\"Reason\":null}",
+        "[2017-06-30 11:37:18.780 -04:00 - wcs - main] Sending VCC message: vcc/profile/list, payload: {\"UserIds\":[11]}",
+        "[2017-06-30 11:37:18.783 -04:00 - wcs - main] WCAPI message received: ExtensionAvailabilityUpdates, requestId: 0, data: {\"AvailUpdates\":[{\"Id\":1307,\"AVState\":0,\"PS\":\"*Available\",\"PSIcon\":2,\"PSCat\":1000,\"PSId\":1165,\"IMState\":2}]}",
+        "[2017-06-30 11:37:18.784 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:18.836 -04:00 - userService - main] Primary softphone is not supported as user is not configured",
+        "[2017-06-30 11:37:18.837 -04:00 - userService - main] Secondary softphone is supported",
+        "[2017-06-30 11:37:18.865 -04:00 - settingsController - main] Loading user details",
+        "[2017-06-30 11:37:18.868 -04:00 - hashedDataStore - main] save: 1307-UserService.extensionList",
+        "[2017-06-30 11:37:19.975 -04:00 - userService - main] Debug info: enableVideo: true, using soft phone: true, has web cam: true, Presence: 1"
+    ]
+}
